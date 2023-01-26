@@ -10,9 +10,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#111828",
-      },
+      colors: {},
     },
   },
   plugins: [require("daisyui")],
@@ -20,11 +18,16 @@ module.exports = {
     themes: [
       {
         light: {
-          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-          "base-100": "#f9fafc",
+          "base-100": "#e4e7e6",
+          "base-200": "#ffffff",
+          "base-content": "#9CA3AF",
+          accent: "#83DBFF",
         },
         dark: {
-          ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
+          "base-100": "#111827",
+          "base-200": "#151E31",
+          "base-content": "#9CA3AF",
+          accent: "#83DBFF",
         },
       },
     ],
