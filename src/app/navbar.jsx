@@ -20,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <>
+    <div className="fixed top-0 z-[9] w-screen">
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
         <div className=" text-accent">
           <h1 className="text-xl font-medium">Aldilla Ulinnaja</h1>
@@ -91,6 +91,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
