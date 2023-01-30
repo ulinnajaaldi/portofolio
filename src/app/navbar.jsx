@@ -19,6 +19,12 @@ export default function Navbar() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const navbarText = [
+    { text: "About", href: "/about", number: "01" },
+    { text: "Projects", href: "/projects", number: "02" },
+    { text: "Contact", href: "/contact", number: "03" },
+  ];
+
   return (
     <div className="fixed top-0 z-[9] w-screen">
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
@@ -40,15 +46,17 @@ export default function Navbar() {
 
         {/* Navbar Text */}
         <div className="hidden gap-10  text-base-content lg:flex">
-          <Link href="#home" className="hover:text-accent">
-            About
-          </Link>
-          <Link href="#project" className="hover:text-accent">
-            Project
-          </Link>
-          <Link href="#Contact" className="hover:text-accent">
-            Contact
-          </Link>
+          {navbarText.map((item, index) => (
+            <Link
+              href="#home"
+              className="flex flex-col items-end font-mono text-sm transition-all duration-300 hover:text-accent xl:text-base"
+              key={index}
+            >
+              <span className="text-xs text-accent">{item.number}</span>
+              <p>{`// ${item.text}`}</p>
+            </Link>
+          ))}
+
           <button onClick={toogleTheme}>
             {theme === "dark" ? (
               <MdLightMode size={25} className="text-yellow-500" />
@@ -69,17 +77,20 @@ export default function Navbar() {
       >
         <div className="fixed top-0 z-0 h-screen w-full backdrop-blur-sm "></div>
         <div className="fixed right-0 top-0 z-10 h-screen w-3/4 bg-base-200 drop-shadow-lg md:w-1/2">
-          <div className="mt-24 flex flex-col items-center justify-center gap-16 text-lg text-base-content">
-            <Link href="#home" className="hover:text-accent">
-              About
-            </Link>
-            <Link href="#project" className="hover:text-accent">
-              Project
-            </Link>
-            <Link href="#Contact" className="hover:text-accent">
-              Contact
-            </Link>
-            <div>
+          <div className="mt-32 flex flex-col items-center justify-center gap-12 text-lg text-base-content">
+            {navbarText.map((item, index) => (
+              <Link
+                href="#home"
+                className="text-center font-mono hover:text-accent"
+                key={index}
+              >
+                <p className="flex flex-col">
+                  <span className="text-sm text-accent">{item.number}.</span>
+                  {`${item.text}`}
+                </p>
+              </Link>
+            ))}
+            <div className="mt-6">
               <button onClick={toogleTheme}>
                 {theme === "dark" ? (
                   <MdLightMode size={25} className="text-yellow-500" />
