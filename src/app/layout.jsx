@@ -1,16 +1,11 @@
 import "./globals.css";
 import Navbar from "./navbar";
-import { Poppins } from "@next/font/google";
-
-const poppins = Poppins({
-  weight: ["100", "300", "400", "500", "700", "900"],
-  subsets: ["latin"],
-  display: "optional",
-});
+import Footer from "./footer";
+import { poppins, roboto_mono } from "./font";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.className}>
+    <html lang="en" className={`${poppins.variable} ${roboto_mono.variable}`}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -19,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <div className="container mx-auto">{children}</div>
+        <Footer />
       </body>
     </html>
   );
