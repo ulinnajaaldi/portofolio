@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -18,7 +20,10 @@ module.exports = {
       },
     },
     extend: {
-      colors: {},
+      fontFamily: {
+        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-roboto-mono)", ...defaultTheme.fontFamily.mono],
+      },
     },
   },
   plugins: [require("daisyui")],
@@ -26,9 +31,11 @@ module.exports = {
     themes: [
       {
         light: {
-          "base-100": "#e4e7e6",
-          "base-content": "#9CA3AF",
-          accent: "#83DBFF",
+          "base-100": "#f9fafc",
+          "base-200": "#ffffff",
+          "base-300": "#3E4856",
+          "base-content": "#7F8388",
+          accent: "#12768C",
         },
         dark: {
           "base-100": "#111827",
