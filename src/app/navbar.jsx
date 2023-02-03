@@ -6,18 +6,18 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState(
-    window.localStorage.getItem("theme" || "light")
-  );
+  // const [theme, setTheme] = useState(
+  //   window.localStorage.getItem("theme" || "light")
+  // );
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    window.localStorage.setItem("theme", theme);
-  }, [theme]);
+  // useEffect(() => {
+  //   document.documentElement.setAttribute("data-theme", theme);
+  //   window.localStorage.setItem("theme", theme);
+  // }, [theme]);
 
-  const toogleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  // const toogleTheme = () => {
+  //   setTheme(theme === "dark" ? "light" : "dark");
+  // };
 
   const navbarText = [
     { text: "About", href: "/about", number: "01" },
@@ -26,7 +26,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 z-[9] w-screen">
+    <div className="fixed top-0 z-[98] w-screen">
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
         <div className=" text-accent">
           <h1 className="text-xl font-medium">Aldilla Ulinnaja</h1>
@@ -45,11 +45,11 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Text */}
-        <div className="hidden gap-10  text-base-content lg:flex">
+        <div className="text-base-content hidden  gap-10 lg:flex">
           {navbarText.map((item, index) => (
             <Link
-              href="#home"
-              className="flex flex-col items-end font-mono text-sm transition-all duration-300 hover:text-accent xl:text-base"
+              href={item.href}
+              className="flex flex-col items-end font-mono text-sm  text-primary transition-all duration-300 hover:text-accent xl:text-base"
               key={index}
             >
               <span className="text-xs text-accent">{item.number}</span>
@@ -57,13 +57,13 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <button onClick={toogleTheme}>
+          {/* <button onClick={toogleTheme}>
             {theme === "dark" ? (
               <MdLightMode size={25} className="text-yellow-500" />
             ) : (
               <MdDarkMode size={25} className="text-yellow-500" />
             )}
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -76,12 +76,12 @@ export default function Navbar() {
         }`}
       >
         <div className="fixed top-0 z-0 h-screen w-full backdrop-blur-sm "></div>
-        <div className="fixed right-0 top-0 z-10 h-screen w-3/4 bg-base-200 drop-shadow-lg md:w-1/2">
-          <div className="mt-32 flex flex-col items-center justify-center gap-12 text-lg text-base-content">
+        <div className="fixed right-0 top-0 z-[99] h-screen w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
+          <div className="text-base-content mt-32 flex flex-col items-center justify-center gap-12 text-lg">
             {navbarText.map((item, index) => (
               <Link
                 href="#home"
-                className="text-center font-mono hover:text-accent"
+                className="text-center font-mono text-primary hover:text-accent"
                 key={index}
               >
                 <p className="flex flex-col">
@@ -90,7 +90,7 @@ export default function Navbar() {
                 </p>
               </Link>
             ))}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <button onClick={toogleTheme}>
                 {theme === "dark" ? (
                   <MdLightMode size={25} className="text-yellow-500" />
@@ -98,7 +98,7 @@ export default function Navbar() {
                   <MdDarkMode size={25} className="text-yellow-500" />
                 )}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
