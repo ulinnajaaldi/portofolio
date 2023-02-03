@@ -7,7 +7,7 @@ export default function Home() {
           Hi, my name is
         </p>
         <h1 className="pb-1 text-4xl font-semibold text-secondary md:pb-4 md:text-5xl lg:text-6xl">
-          Aldilla Ulinnaja.
+          Ulinnaja Aldi.
         </h1>
         <h1 className="pb-4 text-4xl font-semibold text-primary md:pb-8 md:text-5xl lg:text-6xl">
           I build things for the web.
