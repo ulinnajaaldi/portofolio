@@ -6,6 +6,30 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const [isPageTop, setIsPageTop] = useState(window.pageXOffset === 0);
+  const previousCurrentScrollPosition = React.useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+      setIsPageTop(currentScrollPosition === 0);
+      if (
+        previousCurrentScrollPosition.current > currentScrollPosition &&
+        !isNavbarVisible
+      ) {
+        setIsNavbarVisible(true);
+      } else if (
+        previousCurrentScrollPosition.current < currentScrollPosition &&
+        isNavbarVisible
+      ) {
+        setIsNavbarVisible(false);
+      }
+      previousCurrentScrollPosition.current = currentScrollPosition;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isNavbarVisible]);
   // const [theme, setTheme] = useState(
   //   window.localStorage.getItem("theme" || "light")
   // );
@@ -26,7 +50,15 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 z-[98] w-screen">
+    <div
+      className={`fixed top-0 z-[98] w-screen ${
+        isNavbarVisible
+          ? !isPageTop
+            ? "translate-y-0 bg-base_col bg-opacity-80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] backdrop-blur-md transition-all duration-300 ease-in-out"
+            : "bg-base_col bg-opacity-80 py-3 transition-all"
+          : "-translate-y-full transition-all duration-300 ease-in-out"
+      }`}
+    >
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
         <div className=" text-accent">
           <h1 className="text-xl font-medium">Aldilla Ulinnaja</h1>
@@ -72,7 +104,7 @@ export default function Navbar() {
         className={`fixed top-0 w-full lg:hidden ${
           !isOpen
             ? "translate-x-full transition-all duration-150 ease-in-out"
-            : "ease-in-ou translate-x-0 transition-all duration-150 ease-in-out"
+            : "translate-x-0 transition-all duration-150 ease-in-out"
         }`}
       >
         <div className="fixed top-0 z-0 h-screen w-full backdrop-blur-sm "></div>
