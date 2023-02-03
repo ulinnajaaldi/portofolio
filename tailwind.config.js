@@ -20,31 +20,17 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: "#9CA3AF",
+        secondary: "#E5E7EB",
+        accent: "#83DBFF",
+        base_col: "#111827",
+        base_col_darker: "#151E31",
+      },
       fontFamily: {
         sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
         mono: ["var(--font-roboto-mono)", ...defaultTheme.fontFamily.mono],
       },
     },
-  },
-  plugins: [require("daisyui")],
-  daisyui: {
-    themes: [
-      {
-        light: {
-          "base-100": "#f9fafc",
-          "base-200": "#ffffff",
-          "base-300": "#3E4856",
-          "base-content": "#7F8388",
-          accent: "#12768C",
-        },
-        dark: {
-          "base-100": "#111827",
-          "base-200": "#151E31",
-          "base-300": "#E5E7EB",
-          "base-content": "#9CA3AF",
-          accent: "#83DBFF",
-        },
-      },
-    ],
   },
 };
