@@ -3,5 +3,17 @@
 @tailwind utilities;
 
 body {
-  background-color: #111827;
+  @apply bg-base_col;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base_col;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full border-[3px] border-solid border-base_col bg-primary;
 }
