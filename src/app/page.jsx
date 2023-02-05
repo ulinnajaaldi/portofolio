@@ -16,7 +16,7 @@ export default function Home() {
           {`I'm a software engineer specializes in building (and sometimes designing) amazing and new digital experiences. Currently, I am focusing on creating interactive 3d website applications for industrial needs`}
         </p>
       </div>
-      <div className="flex h-[650px] w-full flex-col justify-center py-24 text-center">
+      <div className="flex h-[650px] w-full flex-col items-center justify-center py-24 text-center">
         <div className="z-40 ">
           <h2 className="text-5xl font-bold leading-relaxed text-secondary">
             Delivering modern,
@@ -28,7 +28,7 @@ export default function Home() {
             help them serve their target users.
           </p>
         </div>
-        <div className="bg-base-100 absolute z-0 m-auto opacity-25 ">
+        <div className="bg-base-100 absolute z-0 m-auto h-[600px] w-[320px] opacity-25 md:w-[672px] lg:w-[825px] xl:w-[1080px]">
           <Dominos />
         </div>
       </div>
