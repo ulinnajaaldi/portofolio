@@ -50,9 +50,13 @@ export default function Navbar() {
       className={`fixed top-0 z-[98] w-screen ${
         isNavbarVisible
           ? !isPageTop
-            ? "translate-y-0  bg-base_col bg-opacity-80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] backdrop-blur-md  transition-all duration-300 ease-in-out"
+            ? `translate-y-0  bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out ${
+                !isOpen ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
+              }`
             : " bg-base_col bg-opacity-80 py-3 transition-all"
-          : `-translate-y-full transition-all duration-300 ease-in-out `
+          : `transition-all duration-300 ease-in-out ${
+              !isPageTop ? "-translate-y-full" : "translate-y-0"
+            } `
       }`}
     >
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
@@ -91,11 +95,11 @@ export default function Navbar() {
       <div
         className={`fixed top-0 h-screen w-full lg:hidden ${
           !isOpen
-            ? "translate-x-full transition-all duration-150 ease-in-out"
-            : "translate-x-0 transition-all duration-150 ease-in-out "
+            ? "translate-x-full transition-all duration-200 ease-in"
+            : "translate-x-0 transition-all duration-200 ease-out"
         }`}
       >
-        <div className="absolute top-0 z-0 h-full w-full backdrop-blur-sm"></div>
+        <div className="fixed top-0 z-0 h-full w-full backdrop-blur-sm"></div>
         <div className="fixed right-0 top-0 z-[99] h-full w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
           <div className="text-base-content mt-32 flex flex-col items-center justify-center gap-12 text-lg">
             {navbarText.map((item, index) => (
