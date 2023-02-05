@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { BiMenuAltRight, BiX } from "react-icons/bi";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
+// import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,20 +28,16 @@ export default function Navbar() {
       previousCurrentScrollPosition.current = currentScrollPosition;
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isNavbarVisible]);
-  // const [theme, setTheme] = useState(
-  //   window.localStorage.getItem("theme" || "light")
-  // );
-
-  // useEffect(() => {
-  //   document.documentElement.setAttribute("data-theme", theme);
-  //   window.localStorage.setItem("theme", theme);
-  // }, [theme]);
-
-  // const toogleTheme = () => {
-  //   setTheme(theme === "dark" ? "light" : "dark");
-  // };
+    if (isOpen === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto";
+    };
+  }, [isNavbarVisible, isOpen]);
 
   const navbarText = [
     { text: "About", href: "/about", number: "01" },
@@ -54,9 +50,9 @@ export default function Navbar() {
       className={`fixed top-0 z-[98] w-screen ${
         isNavbarVisible
           ? !isPageTop
-            ? "translate-y-0 bg-base_col bg-opacity-80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] backdrop-blur-md transition-all duration-300 ease-in-out"
-            : "bg-base_col bg-opacity-80 py-3 transition-all"
-          : "-translate-y-full transition-all duration-300 ease-in-out"
+            ? "translate-y-0  bg-base_col bg-opacity-80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] backdrop-blur-md  transition-all duration-300 ease-in-out"
+            : " bg-base_col bg-opacity-80 py-3 transition-all"
+          : `-translate-y-full transition-all duration-300 ease-in-out `
       }`}
     >
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
@@ -88,27 +84,19 @@ export default function Navbar() {
               <p>{`// ${item.text}`}</p>
             </Link>
           ))}
-
-          {/* <button onClick={toogleTheme}>
-            {theme === "dark" ? (
-              <MdLightMode size={25} className="text-yellow-500" />
-            ) : (
-              <MdDarkMode size={25} className="text-yellow-500" />
-            )}
-          </button> */}
         </div>
       </div>
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 w-full lg:hidden ${
+        className={`fixed top-0 h-screen w-full lg:hidden ${
           !isOpen
             ? "translate-x-full transition-all duration-150 ease-in-out"
-            : "translate-x-0 transition-all duration-150 ease-in-out"
+            : "translate-x-0 transition-all duration-150 ease-in-out "
         }`}
       >
-        <div className="fixed top-0 z-0 h-screen w-full backdrop-blur-sm "></div>
-        <div className="fixed right-0 top-0 z-[99] h-screen w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
+        <div className="absolute top-0 z-0 h-full w-full backdrop-blur-sm"></div>
+        <div className="fixed right-0 top-0 z-[99] h-full w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
           <div className="text-base-content mt-32 flex flex-col items-center justify-center gap-12 text-lg">
             {navbarText.map((item, index) => (
               <Link
@@ -122,15 +110,6 @@ export default function Navbar() {
                 </p>
               </Link>
             ))}
-            {/* <div className="mt-6">
-              <button onClick={toogleTheme}>
-                {theme === "dark" ? (
-                  <MdLightMode size={25} className="text-yellow-500" />
-                ) : (
-                  <MdDarkMode size={25} className="text-yellow-500" />
-                )}
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
