@@ -40,9 +40,9 @@ export default function Navbar() {
   }, [isNavbarVisible, isOpen]);
 
   const navbarText = [
-    { text: "About", href: "/about", number: "01" },
-    { text: "Projects", href: "/projects", number: "02" },
-    { text: "Contact", href: "/contact", number: "03" },
+    { text: "Home", href: "/", number: "01" },
+    { text: "About", href: "/about", number: "02" },
+    { text: "Projects", href: "/projects", number: "03" },
   ];
 
   return (
@@ -60,10 +60,9 @@ export default function Navbar() {
       }`}
     >
       <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
-        <div className=" text-accent">
-          <h1 className="text-xl font-medium">Aldilla Ulinnaja</h1>
-          <p className="font-light ">Front-End Software Engginer</p>
-        </div>
+        <Link href="/" className=" text-accent">
+          <h1 className="text-2xl font-semibold">Ulinnaja.</h1>
+        </Link>
 
         {/* Hamburger Button */}
         <div className="flex lg:hidden">
