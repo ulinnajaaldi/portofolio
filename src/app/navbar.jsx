@@ -7,7 +7,7 @@ import { BiMenuAltRight, BiX } from "react-icons/bi";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-  const [isPageTop, setIsPageTop] = useState(window.pageYOffset === 0);
+  const [isPageTop, setIsPageTop] = useState(true);
   const previousCurrentScrollPosition = useRef(0);
 
   useEffect(() => {
@@ -62,7 +62,9 @@ export default function Navbar() {
     >
       <div className="flex h-24 items-center justify-between px-7 lg:px-14">
         <Link href="/" className=" text-accent">
-          <h1 className="text-2xl font-semibold">Ulinnaja.</h1>
+          <h1 className="text-2xl font-semibold">
+            Ulinnaja.{window.pageYOffset}
+          </h1>
         </Link>
 
         {/* Hamburger Button */}
