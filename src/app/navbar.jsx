@@ -7,7 +7,7 @@ import { BiMenuAltRight, BiX } from "react-icons/bi";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-  const [isPageTop, setIsPageTop] = useState(window.pageXOffset === 0);
+  const [isPageTop, setIsPageTop] = useState(false);
   const previousCurrentScrollPosition = React.useRef(0);
 
   useEffect(() => {
@@ -15,29 +15,31 @@ export default function Navbar() {
       const currentScrollPosition = window.pageYOffset;
       setIsPageTop(currentScrollPosition === 0);
       if (
-        previousCurrentScrollPosition.current > currentScrollPosition &&
+        previousCurrentScrollPosition.current < currentScrollPosition &&
         !isNavbarVisible
       ) {
         setIsNavbarVisible(true);
       } else if (
-        previousCurrentScrollPosition.current < currentScrollPosition &&
+        previousCurrentScrollPosition.current > currentScrollPosition &&
         isNavbarVisible
       ) {
         setIsNavbarVisible(false);
       }
       previousCurrentScrollPosition.current = currentScrollPosition;
     };
+    setIsPageTop(window.pageYOffset === 0);
     window.addEventListener("scroll", handleScroll);
     if (isOpen === true) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.body.style.overflow = "auto";
     };
-  }, [isNavbarVisible, isOpen]);
+  }, [isNavbarVisible, isOpen, isPageTop]);
 
   const navbarText = [
     { text: "Home", href: "/", number: "01" },
@@ -48,7 +50,7 @@ export default function Navbar() {
   return (
     <div
       className={`fixed top-0 z-[98] w-screen ${
-        isNavbarVisible
+        !isNavbarVisible
           ? !isPageTop
             ? `translate-y-0  bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out ${
                 !isOpen ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
@@ -59,7 +61,7 @@ export default function Navbar() {
             } `
       }`}
     >
-      <div className="flex h-24 items-center justify-between px-7 shadow-sm lg:px-14">
+      <div className="flex h-24 items-center justify-between px-7 lg:px-14">
         <Link href="/" className=" text-accent">
           <h1 className="text-2xl font-semibold">Ulinnaja.</h1>
         </Link>
