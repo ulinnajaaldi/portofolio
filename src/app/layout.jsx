@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Contact from "./contact";
 import { poppins, roboto_mono } from "./font";
 
 export default function RootLayout({ children }) {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <Navbar />
+        <Contact />
         <div className="container mx-auto ">{children}</div>
         <Footer />
       </body>
