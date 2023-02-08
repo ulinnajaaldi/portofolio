@@ -20,12 +20,9 @@ export default function Home() {
           {`I'm a Front-End software engineer specializes in building (and sometimes designing) amazing and new digital experiences. Currently, I am focusing on creating interactive 3d website applications for industrial needs.`}
         </p>
         <div className="mt-10 text-sm md:mt-16">
-          <Link
-            href="/"
-            className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-          >
+          <button className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10">
             View my cv here!
-          </Link>
+          </button>
         </div>
       </div>
       <div className="flex h-[650px] w-full flex-col items-center justify-center py-24 text-center ">
