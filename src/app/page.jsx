@@ -6,20 +6,20 @@ import secret from "../../public/images/secret.webp";
 export default function Home() {
   return (
     <div>
-      <div className="flex h-screen w-full flex-col justify-center leading-relaxed">
-        <p className="ml-1 pb-3 text-sm text-accent md:pb-7 md:text-base">
+      <div className="flex h-[80vh] w-full flex-col justify-center pt-44 leading-relaxed md:h-screen md:pt-16 lg:pt-12 ">
+        <p className="ml-1 hidden pb-3 text-sm text-accent md:block md:pb-7 md:text-base">
           Hi, my name is
         </p>
-        <h1 className="pb-1 text-4xl font-semibold text-secondary md:pb-4 md:text-5xl lg:text-6xl">
+        <h1 className="pb-1 text-4xl font-semibold text-secondary md:mt-0 md:pb-4 md:text-5xl lg:text-6xl">
           Ulinnaja Aldi.
         </h1>
         <h1 className="pb-4 text-4xl font-semibold text-primary md:pb-8 md:text-5xl lg:text-6xl">
           I build things for the web.
         </h1>
-        <p className="w-full text-sm text-primary md:w-[540px] md:text-base">
+        <p className="w-full text-sm leading-relaxed text-primary md:w-[540px] md:text-base">
           {`I'm a Front-End software engineer specializes in building (and sometimes designing) amazing and new digital experiences. Currently, I am focusing on creating interactive 3d website applications for industrial needs.`}
         </p>
-        <div className="mt-10 text-sm md:mt-16">
+        <div className="mt-10 text-sm md:mt-12">
           <button className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10">
             View my cv here!
           </button>
@@ -33,7 +33,7 @@ export default function Home() {
             className="h-[150px] w-auto opacity-20 md:h-[200px] lg:h-[250px]"
           />
         </div>
-        <div className="z-40 ">
+        <div className="z-40">
           <h2 className="pb-2 text-3xl font-bold leading-tight text-secondary md:pb-0 md:text-4xl md:leading-relaxed lg:text-5xl lg:leading-relaxed">
             Delivering modern,
             <br />
