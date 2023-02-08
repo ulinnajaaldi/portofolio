@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BiMenuAltRight, BiX } from "react-icons/bi";
 // import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-  const [isPageTop, setIsPageTop] = useState(false);
-  const previousCurrentScrollPosition = React.useRef(0);
+  const [isPageTop, setIsPageTop] = useState(window.pageYOffset === 0);
+  const previousCurrentScrollPosition = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,19 +27,18 @@ export default function Navbar() {
       }
       previousCurrentScrollPosition.current = currentScrollPosition;
     };
-    setIsPageTop(window.pageYOffset === 0);
     window.addEventListener("scroll", handleScroll);
-    if (isOpen === true) {
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isNavbarVisible]);
+
+  useEffect(() => {
+    if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.body.style.overflow = "auto";
-    };
-  }, [isNavbarVisible, isOpen, isPageTop]);
+  }, [isOpen]);
 
   const navbarText = [
     { text: "Home", href: "/", number: "01" },
