@@ -62,9 +62,7 @@ export default function Navbar() {
     >
       <div className="flex h-24 items-center justify-between px-7 lg:px-14">
         <Link href="/" className=" text-accent">
-          <h1 className="text-2xl font-semibold">
-            Ulinnaja.{window.pageYOffset}
-          </h1>
+          <h1 className="text-2xl font-semibold">Ulinnaja.</h1>
         </Link>
 
         {/* Hamburger Button */}
