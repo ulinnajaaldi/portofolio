@@ -24,15 +24,15 @@ import splineIcon from "../../public/icons/spline.svg";
 import vscodeIcon from "../../public/icons/vscode.svg";
 
 export const Tools = {
-  Git: { name: "Git", src: gitIcon },
-  Github: { name: "Github", src: githubIcon },
-  NPM: { name: "NPM", src: npmIcon },
-  Yarn: { name: "Yarn", src: yarnIcon },
-  VSCode: { name: "VSCode", src: vscodeIcon },
-  Figma: { name: "Figma", src: figmaIcon },
-  Blender: { name: "Blender", src: blenderIcon },
-  Spline: { name: "Spline", src: splineIcon },
-  Photoshop: { name: "Photoshop", src: photoshopIcon },
+  Git: { name: "Git", src: gitIcon, level: "Version control" },
+  Github: { name: "Github", src: githubIcon, level: "Git hosting" },
+  NPM: { name: "NPM", src: npmIcon, level: "Package manager" },
+  Yarn: { name: "Yarn", src: yarnIcon, level: "Dependency tool" },
+  VSCode: { name: "VSCode", src: vscodeIcon, level: "Code editor" },
+  Figma: { name: "Figma", src: figmaIcon, level: "UIUX Design tool" },
+  Blender: { name: "Blender", src: blenderIcon, level: "3D software" },
+  Spline: { name: "Spline", src: splineIcon, level: "Web 3D design" },
+  Photoshop: { name: "Photoshop", src: photoshopIcon, level: "Image editor" },
 };
 
 export const Stack = {
@@ -46,7 +46,7 @@ export const Stack = {
   Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Professional" },
   SASS: { name: "SASS", src: sassIcon, level: "Intermediate" },
   React: { name: "ReactJS", src: reactIcon, level: "Advanced" },
-  NextJS: { name: "NextJS", src: nextjsIcon, level: "Advanced" },
+  NextJS: { name: "NextJS", src: nextjsIcon, level: "Intermediate" },
   ThreeJS: {
     name: "ThreeJS",
     src: threejsIcon,
