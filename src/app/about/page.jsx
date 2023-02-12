@@ -54,25 +54,28 @@ export default function About() {
           <div className="h-[1px] w-12 bg-primary"></div>
           <h1 className="text-2xl font-semibold text-secondary">Tech stack</h1>
         </div>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-4 gap-8 pb-32">
           {Object.keys(Stack).map((stack, index) => (
-            <div key={index} className="flex items-center gap-5 border">
-              <div className="flex h-16 w-16 items-center justify-center">
-                <Image
-                  src={Stack[stack].src}
-                  alt={Stack[stack].name}
-                  className="h-[90%] w-[90%] transition-all duration-300 hover:h-full hover:w-full"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-secondary">
-                  {Stack[stack].name}
-                </h3>
-                <p className="font-mono text-sm text-accent">
-                  {Stack[stack].level}
-                </p>
-              </div>
-            </div>
+            <Card
+              src={Stack[stack].src}
+              name={Stack[stack].name}
+              level={Stack[stack].level}
+              key={index}
+            />
+          ))}
+        </div>
+        <div className="flex items-center gap-2 pb-12">
+          <div className="h-[1px] w-12 bg-primary"></div>
+          <h1 className="text-2xl font-semibold text-secondary">Tools used</h1>
+        </div>
+        <div className="grid grid-cols-4 gap-8 pb-32">
+          {Object.keys(Tools).map((tools, index) => (
+            <Card
+              src={Tools[tools].src}
+              name={Tools[tools].name}
+              level={Tools[tools].level}
+              key={index}
+            />
           ))}
         </div>
       </div>
