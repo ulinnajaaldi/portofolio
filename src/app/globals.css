@@ -17,3 +17,27 @@ body {
 ::-webkit-scrollbar-thumb {
   @apply rounded-full border-[3px] border-solid border-base_col bg-primary;
 }
+
+@layer components {
+  .text-underline {
+    position: relative;
+    cursor: pointer;
+    @apply text-accent;
+  }
+  .text-underline:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    @apply bg-accent;
+    transition: transform 0.2s;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .text-underline:hover:after {
+    transform: scaleX(1);
+  }
+}
