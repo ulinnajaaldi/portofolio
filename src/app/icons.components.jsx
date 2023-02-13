@@ -22,12 +22,14 @@ import mysqlIcon from "../../public/icons/mysql.svg";
 import photoshopIcon from "../../public/icons/photoshop.svg";
 import splineIcon from "../../public/icons/spline.svg";
 import vscodeIcon from "../../public/icons/vscode.svg";
+import vite from "../../public/icons/vite.svg";
 
 export const Tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
   Github: { name: "Github", src: githubIcon, level: "Git hosting" },
   NPM: { name: "NPM", src: npmIcon, level: "Package manager" },
   Yarn: { name: "Yarn", src: yarnIcon, level: "Dependency tool" },
+  Vite: { name: "Vite", src: vite, level: "Build tool" },
   VSCode: { name: "VSCode", src: vscodeIcon, level: "Code editor" },
   Figma: { name: "Figma", src: figmaIcon, level: "UIUX Design tool" },
   Blender: { name: "Blender", src: blenderIcon, level: "3D software" },
