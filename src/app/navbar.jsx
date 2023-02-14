@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { BiMenuAltRight, BiX } from "react-icons/bi";
-// import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,8 +94,8 @@ export default function Navbar() {
       <div
         className={`fixed top-0 h-screen w-full lg:hidden ${
           !isOpen
-            ? "translate-x-full transition-all duration-200 ease-in"
-            : "translate-x-0 transition-all duration-200 ease-out"
+            ? "translate-x-full transition-all duration-300 ease-in"
+            : "translate-x-0 transition-all duration-300 ease-out"
         }`}
       >
         <div className="fixed top-0 z-0 h-full w-full backdrop-blur-sm"></div>
@@ -104,9 +103,10 @@ export default function Navbar() {
           <div className="text-base-content mt-32 flex flex-col items-center justify-center gap-12 text-lg">
             {navbarText.map((item, index) => (
               <Link
-                href="#home"
+                href={item.href}
                 className="text-center font-mono text-primary hover:text-accent"
                 key={index}
+                onClick={() => setIsOpen(false)}
               >
                 <p className="flex flex-col">
                   <span className="text-sm text-accent">{item.number}.</span>
