@@ -7,7 +7,7 @@ export default function Experience() {
 
   const educationContent = (
     <div className="text-primary">
-      <h3 className="text-xl font-medium leading-loose text-secondary">
+      <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         Informatics Engineering
         <br />
         <span className=" text-accent">
@@ -22,8 +22,8 @@ export default function Experience() {
           </a>
         </span>
       </h3>
-      <p className="pb-5 font-mono">Aug 2020 - Present</p>
-      <ul className="flex list-inside list-disc flex-col gap-4 leading-relaxed">
+      <p className="pb-5 font-mono text-sm lg:text-base">Aug 2020 - Present</p>
+      <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
         <li>
           I enrolled in the Informatics Engineering program with the motivation
           that commercial jobs would be replaced by technology in the future, so
@@ -53,7 +53,7 @@ export default function Experience() {
 
   const organizationsContent = (
     <div className="text-primary">
-      <h3 className="text-xl font-medium leading-loose text-secondary">
+      <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         Staff
         <span className=" text-accent">
           {" "}
@@ -67,8 +67,8 @@ export default function Experience() {
           </a>
         </span>
       </h3>
-      <p className="pb-5 font-mono">Dec 2020 - Dec 2022</p>
-      <ul className="flex list-inside list-disc flex-col gap-4 leading-relaxed">
+      <p className="pb-5 font-mono text-sm lg:text-base">Dec 2020 - Dec 2022</p>
+      <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
         <li>
           In the Student Association of Informatics Engineering at UMS
           (HIMATIF), I hold a position as the coordinator of the Interest and
@@ -104,7 +104,7 @@ export default function Experience() {
 
   const awardsContent = (
     <div className="text-primary">
-      <h3 className="text-xl font-medium leading-loose text-secondary">
+      <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         1st Runner Up UI/UX Competition
         <span className=" text-accent">
           {" "}
@@ -118,8 +118,8 @@ export default function Experience() {
           </a>
         </span>
       </h3>
-      <p className="pb-5 font-mono">July 2022</p>
-      <ul className="flex list-inside list-disc flex-col gap-4 leading-relaxed">
+      <p className="pb-5 font-mono text-sm lg:text-base">July 2022</p>
+      <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
         <li>
           The UI/UX Competition Project organized by the Communication and
           Informatic Festival BEM FKI with the theme {`"`}Menilik Jendela
@@ -181,7 +181,7 @@ export default function Experience() {
 
   const certificationContent = (
     <div className="cursor-default text-primary">
-      <h3 className="text-xl font-medium leading-loose text-secondary">
+      <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         Course
         <span className=" text-accent">
           {" "}
@@ -195,7 +195,7 @@ export default function Experience() {
           </a>
         </span>
       </h3>
-      <ul className="flex list-inside list-disc flex-col gap-4 pb-5 leading-relaxed">
+      <ul className="flex list-inside list-disc flex-col gap-4 pb-5 text-sm leading-relaxed lg:text-base">
         {dicodingData.map((item) => (
           <li key={item.name}>
             {item.name}
@@ -209,7 +209,7 @@ export default function Experience() {
           </li>
         ))}
       </ul>
-      <h3 className="text-xl font-medium leading-loose text-secondary">
+      <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         Course
         <span className=" text-accent">
           {" "}
@@ -223,7 +223,7 @@ export default function Experience() {
           </a>
         </span>
       </h3>
-      <ul className="flex list-inside list-disc flex-col gap-4 pb-5 leading-relaxed">
+      <ul className="flex list-inside list-disc flex-col gap-4 pb-5 text-sm leading-relaxed lg:text-base">
         {sololearnData.map((item) => (
           <li key={item.name}>
             {item.name}
@@ -236,7 +236,7 @@ export default function Experience() {
           </li>
         ))}
       </ul>
-      <h3 className="text-xl font-medium leading-loose text-secondary">
+      <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         Competence
         <span className=" text-accent">
           {" "}
@@ -250,7 +250,7 @@ export default function Experience() {
           </a>
         </span>
       </h3>
-      <ul className="flex list-inside list-disc flex-col gap-4 pb-5 leading-relaxed">
+      <ul className="flex list-inside list-disc flex-col gap-4 pb-5 text-sm leading-relaxed lg:text-base">
         <li>
           Junior Web Developer{" "}
           <a
@@ -289,14 +289,16 @@ export default function Experience() {
   return (
     <div className="flex flex-col items-center justify-center gap-5 pb-32">
       <div className="mb-5 flex w-full items-center justify-start gap-4 lg:w-[776px]">
-        <h1 className="text-2xl font-semibold text-secondary">My Experience</h1>
-        <div className="h-[1px] w-96 bg-primary"></div>
+        <h1 className="text-xl font-semibold text-secondary md:text-2xl">
+          My Experience
+        </h1>
+        <div className="h-[1px] w-48 bg-primary md:w-96"></div>
       </div>
-      <div className="flex gap-8">
-        <div className="flex flex-col font-mono text-sm text-primary">
+      <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+        <div className="flex flex-row overflow-auto font-mono text-sm text-primary md:flex-col">
           {categories.map((category) => (
             <button
-              className={`w-auto py-3 px-5 text-start transition-all duration-300 hover:bg-accent hover:bg-opacity-10 hover:text-accent ${
+              className={`w-auto px-3 py-2 text-start text-xs transition-all duration-300 hover:bg-accent hover:bg-opacity-10 hover:text-accent md:py-3 md:px-5 md:text-base ${
                 activeCategory === category.value
                   ? "bg-accent bg-opacity-10 text-accent"
                   : ""
@@ -308,7 +310,7 @@ export default function Experience() {
             </button>
           ))}
         </div>
-        <div className="h-[400px] w-[490.78px] overflow-auto lg:w-[600px]">
+        <div className="h-[400px] w-[377px] overflow-auto md:w-[490.78px] lg:w-[600px]">
           {selectedContent}
         </div>
       </div>

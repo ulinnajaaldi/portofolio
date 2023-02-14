@@ -17,7 +17,7 @@ export default function About() {
               </span>
               About Me
             </h1>
-            <div className="h-[1px] w-96 bg-primary"></div>
+            <div className="h-[1px] w-52 bg-primary md:w-96"></div>
           </div>
           <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
             <p>
@@ -44,7 +44,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="-my-0 pl-0 md:-my-40 xl:pl-24">
+        <div className="-my-20 pl-0 md:-my-40 lg:-my-0 xl:pl-24">
           <div className="grayscale transition-all duration-500 hover:grayscale-0">
             <Image
               src={ulin}
@@ -55,15 +55,17 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="py-[100px]">
+      <div className="pt-[100px] pb-[50px] lg:pb-[100px]">
         <Experience />
       </div>
       <div>
         <div className="flex items-center gap-2 pb-12">
           <div className="h-[1px] w-12 bg-primary"></div>
-          <h1 className="text-2xl font-semibold text-secondary">Tech stack</h1>
+          <h1 className="text-xl font-semibold text-secondary md:text-2xl">
+            Tech stack
+          </h1>
         </div>
-        <div className="grid grid-cols-2 gap-8 pb-32 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
           {Object.keys(Stack).map((stack, index) => (
             <Card
               src={Stack[stack].src}
@@ -75,9 +77,11 @@ export default function About() {
         </div>
         <div className="flex items-center gap-2 pb-12">
           <div className="h-[1px] w-12 bg-primary"></div>
-          <h1 className="text-2xl font-semibold text-secondary">Tools used</h1>
+          <h1 className="text-xl font-semibold text-secondary md:text-2xl">
+            Tools used
+          </h1>
         </div>
-        <div className="grid grid-cols-2 gap-8 pb-32 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
           {Object.keys(Tools).map((tools, index) => (
             <Card
               src={Tools[tools].src}

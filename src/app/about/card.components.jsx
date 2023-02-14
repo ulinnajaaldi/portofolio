@@ -15,20 +15,22 @@ export default function Card(props) {
 
   return (
     <div
-      className="flex cursor-pointer items-center gap-3 rounded border border-accent px-3 py-2 hover:bg-accent hover:bg-opacity-10"
+      className="flex cursor-pointer items-center gap-3 rounded border border-accent px-2 py-2 hover:bg-accent hover:bg-opacity-10 lg:px-3"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex h-16 w-16 items-center justify-center p-2">
+      <div className="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2">
         <Image
           src={props.src}
           alt={props.name}
           className={`drop-shadow-xl transition-all duration-300 ${
-            hover ? "h-full w-full" : "h-[85%] w-[85%] "
+            hover
+              ? "h-[85%] w-[85%] lg:h-full lg:w-full"
+              : "h-[65%] w-[65%] lg:h-[85%] lg:w-[85%] "
           } `}
         />
       </div>
-      <div className="flex items-center text-lg">
+      <div className="flex items-center text-base lg:text-lg">
         <div
           className={`font-medium text-secondary transition-all duration-300 ${
             hover ? "-translate-y-3 " : "translate-y-0 "
@@ -38,8 +40,10 @@ export default function Card(props) {
         </div>
         <div
           className={`${
-            hover ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
-          } absolute mt-6 font-mono text-sm text-accent transition-all duration-300`}
+            hover
+              ? "translate-x-0 opacity-100"
+              : "translate-x-5 opacity-0 lg:translate-x-10"
+          } absolute mt-6 font-mono text-xs text-accent transition-all duration-300 lg:text-sm`}
         >
           {props.level}
         </div>
