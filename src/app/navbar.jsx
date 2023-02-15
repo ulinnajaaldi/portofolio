@@ -100,7 +100,7 @@ export default function Navbar() {
       >
         <div className="fixed top-0 z-0 h-full w-full backdrop-blur-sm"></div>
         <div className="fixed right-0 top-0 z-[99] h-full w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
-          <div className="mt-32 flex flex-col items-center justify-center gap-12 text-base">
+          <div className="mt-44 flex flex-col items-center justify-center gap-12 text-lg">
             {navbarText.map((item, index) => (
               <Link
                 href={item.href}
@@ -114,15 +114,6 @@ export default function Navbar() {
                 </p>
               </Link>
             ))}
-            <button className="rounded-[4px] border-2 border-accent px-5 py-4 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10">
-              <a
-                href="https://drive.google.com/drive/folders/1QoujbRghInMFjV5ECmudG3Mho-aOdngI?usp=sharing"
-                target="blank"
-                rel="noreferrer"
-              >
-                View my cv here!
-              </a>
-            </button>
           </div>
         </div>
       </div>
