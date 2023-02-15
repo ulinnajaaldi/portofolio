@@ -55,7 +55,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="pt-[100px] pb-[50px] lg:pb-[100px]">
+      <div className="pt-[100px] pb-[50px] lg:pb-[60px]">
         <Experience />
       </div>
       <div>
