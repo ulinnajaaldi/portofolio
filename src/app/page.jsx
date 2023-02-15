@@ -21,7 +21,13 @@ export default function Home() {
         </p>
         <div className="mt-10 text-sm md:mt-12">
           <button className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10">
-            View my cv here!
+            <a
+              href="https://drive.google.com/drive/folders/1QoujbRghInMFjV5ECmudG3Mho-aOdngI?usp=sharing"
+              target="blank"
+              rel="noreferrer"
+            >
+              View my cv here!
+            </a>
           </button>
         </div>
       </div>
