@@ -100,7 +100,7 @@ export default function Navbar() {
       >
         <div className="fixed top-0 z-0 h-full w-full backdrop-blur-sm"></div>
         <div className="fixed right-0 top-0 z-[99] h-full w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
-          <div className="mt-44 flex flex-col items-center justify-center gap-12 text-lg">
+          <div className="mt-44 flex flex-col items-center justify-center gap-12 text-base md:text-lg">
             {navbarText.map((item, index) => (
               <Link
                 href={item.href}
