@@ -292,13 +292,13 @@ export default function Experience() {
         <h1 className="text-xl font-semibold text-secondary md:text-2xl">
           My Experience
         </h1>
-        <div className="h-[1px] w-48 bg-primary md:w-96"></div>
+        <div className="h-[1px] w-32 bg-primary md:w-96"></div>
       </div>
       <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
         <div className="flex flex-row overflow-auto font-mono text-sm text-primary md:flex-col">
           {categories.map((category) => (
             <button
-              className={`w-auto px-3 py-2 text-start text-xs transition-all duration-300 hover:bg-accent hover:bg-opacity-10 hover:text-accent md:py-3 md:px-5 md:text-base ${
+              className={`w-auto px-2 py-2 text-start text-xs transition-all duration-300 hover:bg-accent hover:bg-opacity-10 hover:text-accent md:py-3 md:px-5 md:text-base ${
                 activeCategory === category.value
                   ? "bg-accent bg-opacity-10 text-accent"
                   : ""
@@ -310,7 +310,7 @@ export default function Experience() {
             </button>
           ))}
         </div>
-        <div className="h-[400px] w-[377px] overflow-auto md:w-[490.78px] lg:w-[600px]">
+        <div className="h-[400px] w-[350px] overflow-auto md:w-[490.78px] lg:w-[600px]">
           {selectedContent}
         </div>
       </div>

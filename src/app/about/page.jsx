@@ -17,7 +17,7 @@ export default function About() {
               </span>
               About Me
             </h1>
-            <div className="h-[1px] w-52 bg-primary md:w-96"></div>
+            <div className="h-[1px] w-32 bg-primary md:w-96"></div>
           </div>
           <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
             <p>
