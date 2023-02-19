@@ -5,7 +5,7 @@ export default function Project() {
   return (
     <div className="mt-40 flex flex-col items-center justify-center">
       <h1
-        className="text-center text-2xl font-semibold leading-relaxed text-secondary md:text-3xl"
+        className="pb-2 text-center text-2xl font-semibold leading-relaxed text-secondary md:text-3xl"
         data-aos="zoom-in-up"
         data-aos-duration="300"
       >
@@ -16,7 +16,8 @@ export default function Project() {
         data-aos="fade-up"
         data-aos-duration="300"
       >
-        Discover our track record of success
+        Explore how I consistently delivered maximum results in my previous
+        projects.
       </p>
       <div data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
         <ListProject />
