@@ -6,7 +6,7 @@ import rose from "../../../public/images/rose.webp";
 import treede from "../../../public/images/3d.webp";
 import abinawa from "../../../public/images/abinawa.webp";
 import inpoums from "../../../public/images/inpoums.webp";
-import mobileone from "../../../public/images/mobileone.png";
+import wip from "../../../public/images/wip.webp";
 
 const datas = [
   {
@@ -94,7 +94,7 @@ const datas = [
     id: 9,
     name: "Staycation",
     desc: "This is a web application for booking villas and hotels in Tawangmangu, Indonesia. Users can make reservations through the CRUD system available in the application.",
-    image: mobileone,
+    image: wip,
     web: "",
     repo: "https://github.com/ulinnajaaldi/staycation",
     stack: "React, React-router, React-datepicker, TailwindCSS, DaisyUI",
