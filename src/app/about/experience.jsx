@@ -289,12 +289,27 @@ export default function Experience() {
   return (
     <div className="flex flex-col items-center justify-center gap-5 pb-32">
       <div className="mb-5 flex w-full items-center justify-start gap-4 lg:w-[776px]">
-        <h1 className="text-xl font-semibold text-secondary md:text-2xl">
+        <h1
+          className="text-xl font-semibold text-secondary md:text-2xl"
+          data-aos="fade-left"
+          data-aos-duration="300"
+          data-aos-once="true"
+        >
           My Experience
         </h1>
-        <div className="h-[1px] w-32 bg-primary md:w-96"></div>
+        <div
+          className="h-[1px] w-32 bg-primary md:w-96"
+          data-aos="zoom-in-left"
+          data-aos-duration="600"
+          data-aos-once="true"
+        ></div>
       </div>
-      <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+      <div
+        className="flex flex-col items-center gap-8 md:flex-row md:items-start"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
         <div className="flex flex-row overflow-auto font-mono text-sm text-primary md:flex-col">
           {categories.map((category) => (
             <button

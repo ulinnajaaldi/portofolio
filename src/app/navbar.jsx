@@ -61,7 +61,13 @@ export default function Navbar() {
     >
       <div className="flex h-24 items-center justify-between px-7 lg:px-14">
         <Link href="/" className=" text-accent">
-          <h1 className="text-2xl font-semibold">Ulinnaja.</h1>
+          <h1
+            className="text-2xl font-semibold"
+            data-aos="fade-down"
+            data-aos-once="true"
+          >
+            Ulinnaja.
+          </h1>
         </Link>
 
         {/* Hamburger Button */}
@@ -82,6 +88,9 @@ export default function Navbar() {
               href={item.href}
               className="flex flex-col items-end font-mono text-sm  text-primary transition-all duration-300 hover:text-accent xl:text-base"
               key={index}
+              data-aos="fade-down"
+              data-aos-delay={`${index}00`}
+              data-aos-once="true"
             >
               <span className="text-xs text-accent">{item.number}</span>
               <p>{`// ${item.text}`}</p>
