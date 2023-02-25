@@ -158,6 +158,10 @@ export default function Experience() {
       link: "https://www.dicoding.com/certificates/2VX31QV23ZYQ",
     },
     {
+      name: "Belajar Membuat Aplikasi Back-End untuk Pemula",
+      link: "https://www.dicoding.com/certificates/72ZD93V26PYW",
+    },
+    {
       name: "Belajar Dasar Pemrograman Web",
       link: "https://www.dicoding.com/certificates/QLZ9KGKJ9Z5D",
     },
@@ -176,6 +180,10 @@ export default function Experience() {
     {
       name: "Belajar Dasar-Dasar DevOps",
       link: "https://www.dicoding.com/certificates/QLZ926312X5D",
+    },
+    {
+      name: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+      link: "https://www.dicoding.com/certificates/ERZR0817QXYV",
     },
   ];
 
