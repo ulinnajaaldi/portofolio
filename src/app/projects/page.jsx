@@ -1,6 +1,11 @@
 import React from "react";
 import ListProject from "./list-project";
 
+export const metadata = {
+  title: "Projects | Ulinnaja Aldi",
+  description: "Projects page of Aldilla Ulinnaja portfolio website",
+};
+
 export default function Project() {
   return (
     <div className="mt-40 flex flex-col items-center justify-center">

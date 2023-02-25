@@ -18,10 +18,6 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth `}
     >
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
       <body>
         <Navbar />
