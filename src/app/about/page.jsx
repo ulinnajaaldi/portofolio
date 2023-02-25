@@ -5,6 +5,11 @@ import { Tools, Stack } from "../icons.components";
 import Card from "./card.components";
 import Experience from "./experience";
 
+export const metadata = {
+  title: "About | Ulinnaja Aldi",
+  description: "About Aldilla Ulinnaja",
+};
+
 export default function About() {
   return (
     <div>

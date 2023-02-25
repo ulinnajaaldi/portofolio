@@ -2,6 +2,11 @@ import Dominos from "./models";
 import Image from "next/image";
 import secret from "../../public/images/secret.webp";
 
+export const metadata = {
+  title: "Ulinnaja Aldi",
+  description: "Ulinnaja Aldi Portfolio Website",
+};
+
 export default function Home() {
   return (
     <div>
