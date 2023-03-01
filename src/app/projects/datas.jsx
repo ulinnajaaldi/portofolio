@@ -1,13 +1,13 @@
-import mulih from "../../../public/images/mulih.webp";
-import travel from "../../../public/images/travel.webp";
-import bookshelf from "../../../public/images/bookshelf.webp";
-import notes from "../../../public/images/notes.webp";
-import rose from "../../../public/images/rose.webp";
-import treede from "../../../public/images/3d.webp";
-import abinawa from "../../../public/images/abinawa.webp";
-import inpoums from "../../../public/images/inpoums.webp";
-import wip from "../../../public/images/wip.webp";
-import portfolio_v1 from "../../../public/images/portfolio-v1.webp";
+import mulih from "@images/mulih.webp";
+import travel from "@images/travel.webp";
+import bookshelf from "@images/bookshelf.webp";
+import notes from "@images/notes.webp";
+import rose from "@images/rose.webp";
+import treede from "@images/3d.webp";
+import abinawa from "@images/abinawa.webp";
+import inpoums from "@images/inpoums.webp";
+import wip from "@images/wip.webp";
+import portfolio_v1 from "@images/portfolio-v1.webp";
 
 const datas = [
   {
