@@ -7,6 +7,7 @@ import treede from "@images/3d.webp";
 import abinawa from "@images/abinawa.webp";
 import inpoums from "@images/inpoums.webp";
 import wip from "@images/wip.webp";
+import bertumbuh from "@images/bertumbuh.webp";
 import portfolio_v1 from "@images/portfolio-v1.webp";
 
 const datas = [
@@ -93,22 +94,22 @@ const datas = [
   },
   {
     id: 9,
-    name: "Staycation",
-    desc: "This is a web application for booking villas and hotels in Tawangmangu, Indonesia. Users can make reservations through the CRUD system available in the application.",
-    image: wip,
-    web: "",
-    repo: "https://github.com/ulinnajaaldi/staycation",
-    stack: "React, React-router, React-datepicker, TailwindCSS, DaisyUI",
-    ongoing: true,
-  },
-  {
-    id: 10,
     name: "Portfolio",
     desc: "This is my first portfolio where the design was inspired by various sources, It also features a hidden game which can only be accessed in desktop mode.",
     image: portfolio_v1,
     web: "https://ulinnaja-aldi.vercel.app/",
     repo: "https://github.com/ulinnajaaldi/portofolio",
     stack: "NextJS, TailwindCSS, ThreeJS, React-spline",
+    ongoing: false,
+  },
+  {
+    id: 10,
+    name: "Bertumbuh",
+    desc: "Trying to slice a design from Figma correctly and also attempting to create a responsive website. ",
+    image: bertumbuh,
+    web: "https://bertumbuh.vercel.app/",
+    repo: "",
+    stack: "React, React-Icons, React-Router, TailwindCSS",
     ongoing: false,
   },
 ];

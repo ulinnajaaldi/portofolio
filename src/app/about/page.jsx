@@ -7,12 +7,13 @@ import Experience from "./experience";
 
 export const metadata = {
   title: "About | Ulinnaja Aldi",
-  description: "About Aldilla Ulinnaja",
+  description:
+    "About Ulinnaja Aldi | Hello! My real name is Aldilla Ulinnaja, an Informatics Engineering student interested and experienced in web development, UI design, and 3D modeling.",
 };
 
 export default function About() {
   return (
-    <div>
+    <section>
       <div className="mt-32 flex h-auto flex-col items-center justify-between lg:mt-6 lg:h-screen lg:flex-row xl:mt-0">
         <div className="flex flex-col justify-center text-primary">
           <div className="flex items-center gap-5 pb-10">
@@ -92,7 +93,7 @@ export default function About() {
             Tech stack
           </h1>
         </div>
-        <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
           {Object.keys(Stack).map((stack, index) => (
             <div
               key={index}
@@ -125,7 +126,7 @@ export default function About() {
             Tools used
           </h1>
         </div>
-        <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
           {Object.keys(Tools).map((tools, index) => (
             <div
               key={index}
@@ -144,6 +145,6 @@ export default function About() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

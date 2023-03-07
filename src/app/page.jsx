@@ -4,13 +4,14 @@ import secret from "../../public/images/secret.webp";
 
 export const metadata = {
   title: "Ulinnaja Aldi",
-  description: "Ulinnaja Aldi Portfolio Website",
+  description:
+    "Ulinnaja Aldi is a Front-End software engineer specializes in building (and sometimes designing) amazing and new digital experiences.",
 };
 
 export default function Home() {
   return (
     <div>
-      <div className="flex h-[80vh] w-full flex-col justify-center pt-44 leading-relaxed md:h-screen md:pt-16 lg:pt-12 ">
+      <div className="flex h-[80vh] w-full flex-col justify-center px-0 pt-44 leading-relaxed md:h-screen md:pt-16 lg:px-[70px] lg:pt-12 ">
         <p
           className="ml-1 hidden pb-3 text-sm text-accent md:block md:pb-7 md:text-base"
           data-aos="fade-up"
