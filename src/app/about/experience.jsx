@@ -15,7 +15,8 @@ export default function Experience() {
           @
           <a
             href="https://informatika.ums.ac.id"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             Muhammadiyah Surakarta University
@@ -35,7 +36,8 @@ export default function Experience() {
           <a
             href="https://www.youtube.com/c/UlinnajaTbx"
             className="text-underline"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
           >
             YouTube channel
           </a>{" "}
@@ -60,7 +62,8 @@ export default function Experience() {
           @
           <a
             href="https://www.instagram.com/himatifums/"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             Himatif UMS
@@ -82,7 +85,8 @@ export default function Experience() {
           <a
             href="https://www.instagram.com/parti.ums/"
             className="text-underline"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
           >
             Parade of Informatics Engineering
           </a>
@@ -91,7 +95,8 @@ export default function Experience() {
           and preparations, including photos, videos,{" "}
           <a
             href="https://www.instagram.com/p/CiZACw0JXmC/"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             3D mascot
@@ -111,7 +116,8 @@ export default function Experience() {
           @
           <a
             href="https://www.instagram.com/himatifums/"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             CIF BEM-FKI
@@ -129,7 +135,8 @@ export default function Experience() {
           Our team of three developed a project called{" "}
           <a
             href="https://www.figma.com/proto/RID0jaEou3qDxGEepjxSAw/Rawuh?page-id=51%3A2&node-id=51%3A3&starting-point-node-id=51%3A3&scaling=scale-down-width"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             Rawuh
@@ -196,7 +203,8 @@ export default function Experience() {
           @
           <a
             href="https://www.dicoding.com"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             Dicoding
@@ -208,7 +216,7 @@ export default function Experience() {
           <li key={item.name}>
             {item.name}
             {` `}
-            <a href={item.link} target="blank">
+            <a href={item.link} target="_blank" rel="noreferrer">
               <BiLinkExternal
                 className="inline-flex transition-all hover:text-accent"
                 size={14.5}
@@ -224,7 +232,8 @@ export default function Experience() {
           @
           <a
             href="https://www.sololearn.com"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             Sololearn
@@ -235,7 +244,7 @@ export default function Experience() {
         {sololearnData.map((item) => (
           <li key={item.name}>
             {item.name}
-            <a href={item.link} target="blank">
+            <a href={item.link} target="_blank" rel="noreferrer">
               <BiLinkExternal
                 className="inline-flex transition-all hover:text-accent"
                 size={14.5}
@@ -251,7 +260,8 @@ export default function Experience() {
           @
           <a
             href="https://bnsp.go.id"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             className="text-underline"
           >
             BNSP
@@ -263,7 +273,8 @@ export default function Experience() {
           Junior Web Developer{" "}
           <a
             href="https://www.linkedin.com/feed/update/urn:li:activity:7005734510378041344/"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
           >
             <BiLinkExternal
               className="inline-flex transition-all hover:text-accent"
@@ -321,9 +332,9 @@ export default function Experience() {
         <div className="flex flex-row overflow-auto font-mono text-sm text-primary md:flex-col">
           {categories.map((category) => (
             <button
-              className={`w-auto px-2 py-2 text-start text-xs transition-all duration-300 hover:bg-accent hover:bg-opacity-10 hover:text-accent md:py-3 md:px-5 md:text-base ${
+              className={`w-auto px-2 py-2 text-start text-xs transition-all duration-300 hover:bg-accent/10 hover:text-accent md:py-3 md:px-5 md:text-base ${
                 activeCategory === category.value
-                  ? "bg-accent bg-opacity-10 text-accent"
+                  ? "bg-accent/10 text-accent"
                   : ""
               }`}
               onClick={() => setActiveCategory(category.value)}
@@ -333,7 +344,7 @@ export default function Experience() {
             </button>
           ))}
         </div>
-        <div className="h-[400px] w-[350px] overflow-auto md:w-[490.78px] lg:w-[600px]">
+        <div className="h-[480px]  w-[350px] overflow-auto md:w-[490.78px] lg:w-[600px]">
           {selectedContent}
         </div>
       </div>
