@@ -105,7 +105,7 @@ const datas = [
   {
     id: 10,
     name: "Bertumbuh",
-    desc: "Trying to slice a design from Figma correctly and also attempting to create a responsive website. ",
+    desc: "Trying to slice from Figma correctly to create a responsive website, and actually, it is already very good for being responsive (can be checked through inspect), but sometimes on certain screens, the margin is not read properly.",
     image: bertumbuh,
     web: "https://bertumbuh.vercel.app/",
     repo: "",
