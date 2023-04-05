@@ -177,6 +177,10 @@ export default function Experience() {
       link: "https://www.dicoding.com/certificates/2VX3Y55DNPYQ",
     },
     {
+      name: "Belajar Fundamental Front-End Web Development",
+      link: "https://www.dicoding.com/certificates/MEPJVR344P3V",
+    },
+    {
       name: "Belajar Fundamental Aplikasi Web dengan React",
       link: "https://www.dicoding.com/certificates/0LZ0GGLJ0X65",
     },
