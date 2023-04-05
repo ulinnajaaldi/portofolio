@@ -47,14 +47,14 @@ export const Stack = {
   Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Intermediate" },
   Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Advanced" },
   SASS: { name: "SASS", src: sassIcon, level: "Intermediate" },
-  React: { name: "ReactJS", src: reactIcon, level: "Intermediate" },
-  NextJS: { name: "NextJS", src: nextjsIcon, level: "Beginner" },
+  React: { name: "ReactJS", src: reactIcon, level: "Advanced" },
+  NextJS: { name: "NextJS", src: nextjsIcon, level: "Intermediate" },
   ThreeJS: {
     name: "ThreeJS",
     src: threejsIcon,
     level: "Use Spline Tools",
   },
-  Laravel: { name: "Laravel", src: laravelIcon, level: "Intermediate" },
+  Laravel: { name: "Laravel", src: laravelIcon, level: "Beginer" },
   NodeJS: { name: "NodeJS", src: nodejsIcon, level: "Beginner" },
   MySQL: { name: "MySQL", src: mysqlIcon, level: "Intermediate" },
 };
