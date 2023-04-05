@@ -7,8 +7,9 @@ import treede from "@images/3d.webp";
 import abinawa from "@images/abinawa.webp";
 import inpoums from "@images/inpoums.webp";
 import wip from "@images/wip.webp";
-import bertumbuh from "@images/bertumbuh.webp";
 import portfolio_v1 from "@images/portfolio-v1.webp";
+import bertumbuh from "@images/bertumbuh.webp";
+import coffe_bean from "@images/coffe-bean.webp";
 
 const datas = [
   {
@@ -110,6 +111,16 @@ const datas = [
     web: "https://bertumbuh.vercel.app/",
     repo: "",
     stack: "React, React-Icons, React-Router, TailwindCSS",
+    ongoing: false,
+  },
+  {
+    id: 11,
+    name: "Coffe Bean",
+    desc: "Interactive website featuring a 3D model that can be rendered online. I wanted to apply the creative idea I had, even if it was just from a picture ✨, I hope you enjoy the enjoyable experience on the website!",
+    image: coffe_bean,
+    web: "https://coffee-bean-3d.vercel.app/",
+    repo: "https://github.com/ulinnajaaldi/coffee-bean",
+    stack: "Vite, React, React-Icons, TailwindCSS, Spline, Framer Motion",
     ongoing: false,
   },
 ];
