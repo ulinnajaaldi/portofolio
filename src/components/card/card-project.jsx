@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
-import { AiOutlineArrowRight } from "react-icons/ai";
 
-export default function Card(props) {
+export default function CardProject(props) {
   const [hover, setHover] = useState(false);
   const handleClick = (url) => {
     window.open(url, "_blank");
@@ -70,7 +69,7 @@ export default function Card(props) {
         />
         {hover ? (
           <div className="absolute top-0 flex h-full w-full items-center justify-center gap-1 bg-base_col_darker/80 text-white">
-            {props.web ? "DEMO" : "REPO"}
+            {props.web ? "Live Demo" : "Source Code"}
           </div>
         ) : null}
       </div>

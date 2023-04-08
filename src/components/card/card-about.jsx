@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-export default function Card(props) {
+export default function CardAbout(props) {
   const [hover, setHover] = useState(false);
 
   const handleMouseEnter = () => {

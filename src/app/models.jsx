@@ -1,11 +1,30 @@
 "use client";
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
-
-const Spline = dynamic(() => import("@splinetool/react-spline"));
+import { useState } from "react";
+import Spline from "@splinetool/react-spline";
+import LoadingSpinner from "@/components/loading/loading-spinner";
 
 export default function Dominos() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <Spline scene="https://prod.spline.design/BJjm9TZpZw1fn-BD/scene.splinecode" />
+    <>
+      <Spline
+        onLoad={() => setLoading(false)}
+        scene="https://prod.spline.design/BJjm9TZpZw1fn-BD/scene.splinecode"
+      />
+      {loading && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <LoadingSpinner />
+        </div>
+      )}
+    </>
   );
 }
