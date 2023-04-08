@@ -1,6 +1,6 @@
 import Dominos from "./models";
 import Image from "next/image";
-import secret from "../../public/images/secret.webp";
+import secret from "@images/secret.webp";
 
 export const metadata = {
   title: "Ulinnaja Aldi",

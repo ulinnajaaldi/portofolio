@@ -1,12 +1,12 @@
 "use client";
-import "./globals.css";
+import "@/styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
-import Contact from "./contact";
-import { poppins, roboto_mono } from "./font";
 import { useEffect } from "react";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
+import Contact from "@/components/contact/contact";
+import { poppins, roboto_mono } from "./font";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <Contact />
-        <div className="container mx-auto ">{children}</div>
+        <div className="container mx-auto">{children}</div>
         <Footer />
       </body>
     </html>

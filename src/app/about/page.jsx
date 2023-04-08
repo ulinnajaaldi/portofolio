@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import ulin from "../../../public/images/ulin.webp";
-import { Tools, Stack } from "../icons.components";
-import Card from "./card.components";
+import ulin from "@images/ulin.webp";
+import { tools, stacks } from "@/utils/datas";
+import CardAbout from "@/components/card/card-about";
 import Experience from "./experience";
 
 export const metadata = {
@@ -94,7 +94,7 @@ export default function About() {
           </h1>
         </div>
         <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
-          {Object.keys(Stack).map((stack, index) => (
+          {Object.keys(stacks).map((stack, index) => (
             <div
               key={index}
               data-aos="zoom-in"
@@ -102,10 +102,10 @@ export default function About() {
               data-aos-duration="300"
               data-aos-once="true"
             >
-              <Card
-                src={Stack[stack].src}
-                name={Stack[stack].name}
-                level={Stack[stack].level}
+              <CardAbout
+                src={stacks[stack].src}
+                name={stacks[stack].name}
+                level={stacks[stack].level}
               />
             </div>
           ))}
@@ -127,7 +127,7 @@ export default function About() {
           </h1>
         </div>
         <div className="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
-          {Object.keys(Tools).map((tools, index) => (
+          {Object.keys(tools).map((tool, index) => (
             <div
               key={index}
               data-aos="zoom-in"
@@ -135,10 +135,10 @@ export default function About() {
               data-aos-duration="300"
               data-aos-once="true"
             >
-              <Card
-                src={Tools[tools].src}
-                name={Tools[tools].name}
-                level={Tools[tools].level}
+              <CardAbout
+                src={tools[tool].src}
+                name={tools[tool].name}
+                level={tools[tool].level}
                 key={index}
               />
             </div>

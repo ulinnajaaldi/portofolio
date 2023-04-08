@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Card from "./card.components";
-import datas from "./datas";
+import CardProject from "@/components/card/card-project";
+import { projects } from "@/utils/datas";
 
 export default function ListProject() {
   const [numToShow, setNumToShow] = useState(6);
 
-  const dataArray = Object.keys(datas).map((key) => {
-    return { id: key, ...datas[key] };
+  const dataArray = Object.keys(projects).map((key) => {
+    return { id: key, ...projects[key] };
   });
 
   const sortedData = dataArray.sort((a, b) => a.id < b.id).reverse();
@@ -35,9 +35,9 @@ export default function ListProject() {
         {sortedData.slice(0, numToShow).map((data) => (
           <div
             key={data.id}
-            className="translate-y-0 cursor-pointer transition-all hover:-translate-y-2"
+            className="translate-y-0 cursor-pointer transition-all duration-300 hover:-translate-y-2"
           >
-            <Card
+            <CardProject
               name={data.name}
               github={data.repo}
               web={data.web}
