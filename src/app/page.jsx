@@ -39,20 +39,19 @@ export default function Home() {
           am focusing on creating interactive 3d website applications for
           industrial needs.
         </p>
-        <div className="mt-10 text-sm md:mt-12">
-          <button
+        <div
+          className="mt-10 text-sm md:mt-14"
+          data-aos="flip-up"
+          data-aos-duration="600"
+        >
+          <a
             className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-            data-aos="flip-up"
-            data-aos-duration="600"
+            href="https://drive.google.com/drive/folders/1QoujbRghInMFjV5ECmudG3Mho-aOdngI?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
           >
-            <a
-              href="https://drive.google.com/drive/folders/1QoujbRghInMFjV5ECmudG3Mho-aOdngI?usp=sharing"
-              target="blank"
-              rel="noreferrer"
-            >
-              View my cv here!
-            </a>
-          </button>
+            <button>View my cv here!</button>
+          </a>
         </div>
       </div>
       <div className="flex h-[650px] w-full flex-col items-center justify-center py-24 text-center ">
