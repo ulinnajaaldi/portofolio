@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
+import LoadingSpinner from "../loading/loading-spinner";
 
 export default function CardProject(props) {
   const [hover, setHover] = useState(false);
+  const { loading, setLoading } = props;
+
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
@@ -19,15 +22,7 @@ export default function CardProject(props) {
   return (
     <div className="w-[330px] bg-accent/10 px-7 py-5 text-secondary transition-all hover:text-accent lg:w-[350px]">
       <div className="flex items-center justify-between">
-        <h3 className="text-xl font-semibold tracking-wide">
-          {props.name}
-          {props.ongoing && (
-            <span className="font-mono text-base font-medium text-slate-400">
-              {" "}
-              WIP Project
-            </span>
-          )}
-        </h3>
+        <h3 className="text-xl font-semibold tracking-wide">{props.name}</h3>
 
         <div className="flex cursor-pointer items-end gap-2 text-primary">
           {props.github && (
@@ -68,8 +63,25 @@ export default function CardProject(props) {
           className="m-auto h-full w-full rounded-md object-cover"
         />
         {hover ? (
-          <div className="absolute top-0 flex h-full w-full items-center justify-center gap-1 bg-base_col_darker/80 text-white">
-            {props.web ? "Live Demo" : "Source Code"}
+          <div className="absolute top-0 left-0 h-full w-full rounded-md ">
+            {props.gif && (
+              <Image
+                src={props.gif}
+                alt={props.name}
+                onLoad={() => setLoading(false)}
+                className="m-auto h-full rounded-md object-cover"
+              />
+            )}
+            <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/60 text-white">
+              {props.gif && props.web && "Live Demo"}
+              {!props.gif && props.web && "Checkout Site"}
+              {!props.web && "Source Code"}
+            </p>
+            {loading && (
+              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-md bg-base_col_darker/60">
+                <LoadingSpinner />
+              </div>
+            )}
           </div>
         ) : null}
       </div>

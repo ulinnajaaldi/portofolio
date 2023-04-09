@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CardProject from "@/components/card/card-project";
 import { projects } from "@/utils/datas";
 
 export default function ListProject() {
   const [numToShow, setNumToShow] = useState(6);
+  const [loading, setLoading] = useState(true);
 
   const dataArray = Object.keys(projects).map((key) => {
     return { id: key, ...projects[key] };
@@ -38,13 +39,15 @@ export default function ListProject() {
             className="translate-y-0 cursor-pointer transition-all duration-300 hover:-translate-y-2"
           >
             <CardProject
+              loading={loading}
+              setLoading={setLoading}
               name={data.name}
               github={data.repo}
               web={data.web}
               image={data.image}
               desc={data.desc}
               stack={data.stack}
-              ongoing={data.ongoing}
+              gif={data.gif}
             />
           </div>
         ))}
