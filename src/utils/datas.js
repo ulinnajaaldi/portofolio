@@ -1,4 +1,4 @@
-//Stack Icons
+// Stack Icons
 import htmlIcon from "@icons/html.svg";
 import cssIcon from "@icons/css.svg";
 import jsIcon from "@icons/js.svg";
@@ -25,12 +25,11 @@ import splineIcon from "@icons/spline.svg";
 import vscodeIcon from "@icons/vscode.svg";
 import vite from "@icons/vite.svg";
 
-//Project Images
+// Project Images
 import mulih from "@images/mulih.webp";
 import travel from "@images/travel.webp";
 import bookshelf from "@images/bookshelf.webp";
 import notes from "@images/notes.webp";
-import rose from "@images/rose.webp";
 import treede from "@images/3d.webp";
 import abinawa from "@images/abinawa.webp";
 import inpoums from "@images/inpoums.webp";
@@ -38,6 +37,14 @@ import portfolio_v1 from "@images/portfolio-v1.webp";
 import bertumbuh from "@images/bertumbuh.webp";
 import coffe_bean from "@images/coffe-bean.webp";
 import dapbunda from "@images/dapbunda.webp";
+
+// Gif Images
+import dapbundaGif from "@gif/dapbunda.gif";
+import coffebeanGif from "@gif/coffe-bean.gif";
+import portfolioGif from "@gif/portfolio.gif";
+import notesGif from "@gif/notes.gif";
+import abinawaGif from "@gif/abinawa.gif";
+import bookshelfGif from "@gif/bookshelf.gif";
 
 const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
@@ -83,7 +90,7 @@ const projects = [
     web: "https://mulih.netlify.app/",
     repo: "https://github.com/ulinnajaaldi/Dicoding-Mulih",
     stack: "HTML, CSS, JavaScript, Responsive Web Design",
-    ongoing: false,
+    gif: "",
   },
   {
     id: 2,
@@ -93,7 +100,7 @@ const projects = [
     web: "https://travel-apps.ulinnajaaldi.repl.co",
     repo: "https://github.com/ulinnajaaldi/Vacation-Ticket-PHP",
     stack: "HTML, Javascript, PHP, MySQL, TailwindCSS, DaisyUI, AOS, SwiperJS",
-    ongoing: false,
+    gif: "",
   },
   {
     id: 3,
@@ -103,98 +110,87 @@ const projects = [
     web: "https://bookshelf-js.vercel.app",
     repo: "https://github.com/ulinnajaaldi/Bookshelf-JS",
     stack: "HTML, Javascript, Bootstrap, SASS, ToastifyJS",
-    ongoing: false,
+    gif: bookshelfGif,
   },
   {
     id: 4,
-    name: "Rose for Yours",
-    desc: "Experiment in creating interactive 3D objects within a website, where users can input a name to display the object.",
-    image: rose,
-    web: "https://rose-for-u.vercel.app",
-    repo: "https://github.com/ulinnajaaldi/Rose-for-u-too-3",
-    stack:
-      "Vite, React, React-spline, React-router, TypewriterJS, QuotesAPI, TailwindCSS",
-    ongoing: false,
-  },
-  {
-    id: 5,
     name: "3D World Journey",
     desc: "Learning process using spline with react for Interactive 3D Object Web projects",
     image: treede,
     web: "https://ulinnaja-3-d-apps-intective.vercel.app",
     repo: "https://github.com/ulinnajaaldi/React-3D-Object-Intective",
     stack: "React, React-spline, React-router, SwiperJS, TailwindCSS, DaisyUI",
-    ongoing: false,
+    gif: "",
   },
   {
-    id: 6,
+    id: 5,
     name: "Abinawa",
     desc: "This website is designed as a digital learning tool to introduce the art of wayang kulit to the public. The website features interactive 3D models of wayang kulit.",
     image: abinawa,
     web: "http://abinawa.vercel.app",
     repo: "https://github.com/ulinnajaaldi/abinawa",
     stack: "Vite, React, React-spline, React-router, TailwindCSS",
-    ongoing: false,
+    gif: abinawaGif,
   },
   {
-    id: 7,
+    id: 6,
     name: "Inpo UMS",
     desc: "The purpose of this platform is to provide students with a medium to share information about the latest events or news happening in the UMS community.",
     image: inpoums,
     web: "",
     repo: "https://github.com/ulinnajaaldi/laravel-react-inpo-ums",
     stack: "Laravel, Laravel Breeze, React, React-icons, TailwindCSS, DaisyUI",
-    ongoing: false,
+    gif: "",
   },
   {
-    id: 8,
+    id: 7,
     name: "Notes",
     desc: "Welcome to Notes app! With this app, you can create, edit, delete and organize your notes. You can also sign up and log in to access your notes. This app I made for complete the Dicoding React Fundamental course.",
     image: notes,
     web: "https://notes-app-api-db-dicoding.vercel.app",
     repo: "https://github.com/ulinnajaaldi/Notes",
     stack: "React, React-Icons, React-Router, Rest API, TailwindCSS, DaisyUI",
-    ongoing: false,
+    gif: notesGif,
   },
   {
-    id: 9,
+    id: 8,
     name: "Portfolio",
     desc: "My first personal portfolio!! I designed it by combining different ideas from various sources. It also has a secret game that you can play on your desktop. Can you find it?",
     image: portfolio_v1,
     web: "https://ulinnaja-aldi.vercel.app/",
     repo: "https://github.com/ulinnajaaldi/portofolio",
     stack: "NextJS, TailwindCSS, ThreeJS, React-spline",
-    ongoing: false,
+    gif: portfolioGif,
   },
   {
-    id: 10,
-    name: "Bertumbuh",
+    id: 9,
+    name: "Bertumbuh (Slice)",
     desc: "Trying to slice from Figma correctly to create a responsive website, and actually, it is already very good for being responsive (can be checked through inspect), but sometimes on certain screens, the margin is not read properly.",
     image: bertumbuh,
     web: "https://bertumbuh.vercel.app/",
     repo: "",
     stack: "React, React-Icons, React-Router, TailwindCSS",
-    ongoing: false,
+    gif: "",
   },
   {
-    id: 11,
+    id: 10,
     name: "Coffe Bean",
     desc: "Interactive website featuring a 3D model that can be rendered online. I wanted to apply the creative idea I had, even if it was just from a picture ✨, I hope you enjoy the enjoyable experience on the website!",
     image: coffe_bean,
     web: "https://coffee-bean-3d.vercel.app/",
     repo: "https://github.com/ulinnajaaldi/coffee-bean",
     stack: "Vite, React, React-Icons, TailwindCSS, Spline, Framer Motion",
-    ongoing: false,
+    gif: coffebeanGif,
   },
   {
-    id: 12,
+    id: 11,
     name: "DapBunda Meal",
     desc: "This website provides information about various meals and how to cook them 🍴, using the API from TheMealDB. I created this website to complete the Dicoding Front End Fundamental course.",
     image: dapbunda,
     web: "https://dapbunda.vercel.app/",
     repo: "https://github.com/ulinnajaaldi/dicoding-dapbunda-fe-fundamental",
     stack: "Webpack, Axios, TailwindCSS, DaisyUI, AOS",
-    ongoing: false,
+    gif: dapbundaGif,
   },
 ];
 
