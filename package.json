@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.1.3",
     "@splinetool/react-spline": "^2.2.5",
     "@splinetool/runtime": "^0.9.208",
     "aos": "^2.3.4",

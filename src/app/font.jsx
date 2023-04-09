@@ -1,4 +1,4 @@
-import { Poppins, Roboto_Mono } from "@next/font/google";
+import { Poppins, Roboto_Mono } from "next/font/google";
 
 export const poppins = Poppins({
   weight: ["100", "300", "400", "500", "700", "900"],
