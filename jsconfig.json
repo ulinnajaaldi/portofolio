@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@images/*": ["./public/images/*"],
-      "@icons/*": ["./public/icons/*"]
+      "@icons/*": ["./public/icons/*"],
+      "@gif/*": ["./public/gif/*"],
     }
   }
 }
