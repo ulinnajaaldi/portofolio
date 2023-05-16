@@ -5,7 +5,7 @@ import { projects } from "@/utils/datas";
 
 export default function ListProject() {
   const [numToShow, setNumToShow] = useState(6);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState([]);
 
   const dataArray = Object.keys(projects).map((key) => {
     return { id: key, ...projects[key] };
@@ -33,14 +33,20 @@ export default function ListProject() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="my-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4 xl:grid-cols-3">
-        {sortedData.slice(0, numToShow).map((data) => (
+        {sortedData.slice(0, numToShow).map((data, index) => (
           <div
             key={data.id}
             className="translate-y-0 cursor-pointer transition-all duration-300 hover:-translate-y-2"
           >
             <CardProject
-              loading={loading}
-              setLoading={setLoading}
+              loading={loading[index]}
+              setLoading={(value) => {
+                setLoading((prevLoading) => {
+                  const newLoading = [...prevLoading];
+                  newLoading[index] = value;
+                  return newLoading;
+                });
+              }}
               name={data.name}
               github={data.repo}
               web={data.web}
