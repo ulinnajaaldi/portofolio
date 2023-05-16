@@ -1,19 +1,19 @@
 "use client";
 import React from "react";
-import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { TbBrandTelegram } from "react-icons/tb";
+import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { TbBrandTelegram, TbBrandTiktok } from "react-icons/tb";
 
 export default function Contact() {
   const sosmeds = [
     {
+      name: "Tiktok",
+      icon: <TbBrandTiktok size={20} />,
+      link: "https://www.tiktok.com/@ulinnaja.code",
+    },
+    {
       name: "Github",
       icon: <FiGithub size={20} />,
       link: "https://github.com/ulinnajaaldi",
-    },
-    {
-      name: "Linkedin",
-      icon: <FiLinkedin size={20} />,
-      link: "https://www.linkedin.com/in/ulinnaja-aldi/",
     },
     {
       name: "Instagram",
@@ -26,9 +26,9 @@ export default function Contact() {
       link: "https://t.me/ulinnajaah",
     },
     {
-      name: "Twitter",
-      icon: <FiTwitter size={20} />,
-      link: "https://twitter.com/UlinnajaAldi",
+      name: "Linkedin",
+      icon: <FiLinkedin size={20} />,
+      link: "https://www.linkedin.com/in/ulinnaja-aldi/",
     },
   ];
   return (
@@ -46,7 +46,12 @@ export default function Contact() {
                 className="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent"
                 title={sosmed.name}
               >
-                <a href={sosmed.link} target="_blank" rel="noreferrer">
+                <a
+                  href={sosmed.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={sosmed.name}
+                >
                   {sosmed.icon}
                 </a>
               </div>

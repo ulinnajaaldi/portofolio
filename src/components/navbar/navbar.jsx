@@ -72,7 +72,13 @@ export default function Navbar() {
 
         {/* Hamburger Button */}
         <div className="flex lg:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="relative z-30">
+          <button
+            aria-label={
+              !isOpen ? "Open Navigation Menu" : "Close Navigation Menu"
+            }
+            onClick={() => setIsOpen(!isOpen)}
+            className="relative z-30"
+          >
             {!isOpen ? (
               <BiMenuAltRight className="h-10 w-10 fill-current text-accent" />
             ) : (

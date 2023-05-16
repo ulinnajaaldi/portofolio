@@ -24,6 +24,7 @@ import photoshopIcon from "@icons/photoshop.svg";
 import splineIcon from "@icons/spline.svg";
 import vscodeIcon from "@icons/vscode.svg";
 import vite from "@icons/vite.svg";
+import webpackIcon from "@icons/webpack.svg";
 
 // Project Images
 import mulih from "@images/mulih.webp";
@@ -53,6 +54,7 @@ const tools = {
   Yarn: { name: "Yarn", src: yarnIcon, level: "Dependency tool" },
   Vite: { name: "Vite", src: vite, level: "Build tool" },
   VSCode: { name: "VSCode", src: vscodeIcon, level: "Code editor" },
+  MySQL: { name: "MySQL", src: mysqlIcon, level: "Database" },
   Figma: { name: "Figma", src: figmaIcon, level: "UIUX Design tool" },
   Blender: { name: "Blender", src: blenderIcon, level: "3D software" },
   Spline: { name: "Spline", src: splineIcon, level: "Web 3D design" },
@@ -62,13 +64,12 @@ const tools = {
 const stacks = {
   HTML: { name: "HTML", src: htmlIcon, level: "Advanced" },
   CSS: { name: "CSS", src: cssIcon, level: "Advanced" },
+  SASS: { name: "SASS", src: sassIcon, level: "Advanced" },
   JS: { name: "Javascript", src: jsIcon, level: "Advanced" },
   PHP: { name: "PHP", src: phpIcon, level: "Intermediate" },
   Java: { name: "Java", src: javaIcon, level: "Beginner" },
   Python: { name: "Python", src: pythonIcon, level: "Beginner" },
-  Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Intermediate" },
-  Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Advanced" },
-  SASS: { name: "SASS", src: sassIcon, level: "Intermediate" },
+  Webpack: { name: "Webpack", src: webpackIcon, level: "Advanced" },
   React: { name: "ReactJS", src: reactIcon, level: "Advanced" },
   NextJS: { name: "NextJS", src: nextjsIcon, level: "Intermediate" },
   ThreeJS: {
@@ -78,7 +79,8 @@ const stacks = {
   },
   Laravel: { name: "Laravel", src: laravelIcon, level: "Beginer" },
   NodeJS: { name: "NodeJS", src: nodejsIcon, level: "Beginner" },
-  MySQL: { name: "MySQL", src: mysqlIcon, level: "Intermediate" },
+  Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Intermediate" },
+  Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Advanced" },
 };
 
 const projects = [
