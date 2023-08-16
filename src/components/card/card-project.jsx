@@ -22,9 +22,16 @@ export default function CardProject(props) {
   return (
     <div className="w-[330px] bg-accent/10 px-7 py-5 text-secondary transition-all hover:text-accent lg:w-[350px]">
       <div className="flex items-center justify-between">
-        <h3 className="text-xl font-semibold tracking-wide">{props.name}</h3>
+        <a
+          href={props.web ? props.web : props.github}
+          target="_blank"
+          rel="noreferrer"
+          className="text-xl font-semibold tracking-wide"
+        >
+          {props.name}
+        </a>
 
-        <div className="flex cursor-pointer items-end gap-2 text-primary">
+        <div className="flex items-end gap-2 text-primary">
           {props.github && (
             <a
               href={props.github}
