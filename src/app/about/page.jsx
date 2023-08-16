@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import ulin from "@images/ulin.webp";
 import { tools, stacks } from "@/utils/datas";
@@ -36,25 +35,29 @@ export default function About() {
           <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
             <p data-aos="zoom-in-right">
               Hello! My real name is Aldilla Ulinnaja, an Informatics
-              Engineering student interested and experienced in web development,
-              UI design, and 3D modeling.
+              Engineering student interested and experienced in Web Development,
+              specializing in{" "}
+              <span className="text-accent">Frontend Development</span> using
+              JavaScript
             </p>
             <p data-aos="zoom-in-right" data-aos-delay="100">
               As an Informatics Engineering student, I have strong knowledge and
-              expertise in web programming and UI design. I am capable of making
-              user-friendly and visually appealing websites and applications.
+              expertise in Web programming and UI Design. I possess the ability
+              to create user-friendly and visually captivating websites and
+              applications.
             </p>
             <p data-aos="zoom-in-right" data-aos-delay="200">
-              In addition to web development and UI design, I am also skilled in
-              3D modeling. This skill helps me create realistic and impressive
-              visuals.
-            </p>
-            <p data-aos="zoom-in-right" data-aos-delay="300">
               I am constantly striving to improve my skills and knowledge. I
               believe that ongoing training and personal projects are key to
               success. I am committed to staying up-to-date with the latest
               developments in my field and continuously expanding my knowledge
               and skills.
+            </p>
+            <p data-aos="zoom-in-right" data-aos-delay="300">
+              And oh, there's a little twist &#x2013; I'm also into the world of
+              3D modeling, though I confess I might not be diving into its
+              depths just yet. It's like my side quest that adds a dash of
+              excitement.
             </p>
           </div>
         </div>

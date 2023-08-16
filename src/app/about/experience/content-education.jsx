@@ -3,8 +3,7 @@ export const ContentEducation = () => {
     <div className="text-primary">
       <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
         Informatics Engineering
-        <br />
-        <span className=" text-accent">
+        <span className="text-base text-accent">
           {" "}
           @
           <a
@@ -41,7 +40,7 @@ export const ContentEducation = () => {
         <li>
           Starting from the fifth semester, I realized that coding was my main
           goal in pursuing this major. Therefore, I began to learn about
-          programming and fell in love with coding.
+          programming and fell in love with coding ✨
         </li>
       </ul>
     </div>

@@ -1,4 +1,3 @@
-import { BsArrowUpRightCircle } from "react-icons/bs";
 import { useState } from "react";
 
 export const ContentCertification = () => {
@@ -11,40 +10,82 @@ export const ContentCertification = () => {
       link: "https://www.dicoding.com",
       certificate: [
         {
-          name: "Belajar Fundamental Aplikasi Web dengan React",
+          name: "Front-End Web Developer Expert",
+          link: "https://www.dicoding.com/certificates/RVZKOMWKQPD5",
+        },
+        {
+          name: "Intermediate Front-End Web Tools",
+          link: "https://www.dicoding.com/certificates/NVP7ONEYRPR0",
+        },
+        {
+          name: "Fundamental Web Applications with React",
           link: "https://www.dicoding.com/certificates/0LZ0GGLJ0X65",
         },
         {
-          name: "Belajar Fundamental Front-End Web Development",
+          name: "Fundamental Front-End Web Development",
           link: "https://www.dicoding.com/certificates/MEPJVR344P3V",
         },
         {
-          name: "Belajar Membuat Front-End Web untuk Pemula",
+          name: "Create Front-End Web for Beginners",
           link: "https://www.dicoding.com/certificates/2VX3Y55DNPYQ",
         },
         {
-          name: "Belajar Membuat Aplikasi Back-End untuk Pemula",
+          name: "Build Back-End Applications for Beginners",
           link: "https://www.dicoding.com/certificates/72ZD93V26PYW",
         },
         {
-          name: "Belajar Dasar Pemrograman Web",
+          name: "Basics of Web Programming",
           link: "https://www.dicoding.com/certificates/QLZ9KGKJ9Z5D",
         },
         {
-          name: "Belajar Dasar Pemrograman JavaScript",
+          name: "Basics of JavaScript Programming",
           link: "https://www.dicoding.com/certificates/2VX31QV23ZYQ",
         },
         {
-          name: "Belajar Jaringan Komputer untuk Pemula",
+          name: "Computer Networking for Beginners",
           link: "https://www.dicoding.com/certificates/EYX49QGVRPDL",
         },
         {
-          name: "Belajar Dasar-Dasar DevOps",
+          name: "Basics of DevOps",
           link: "https://www.dicoding.com/certificates/QLZ926312X5D",
         },
         {
-          name: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+          name: "Cloud Practitioner Essentials (Learning AWS Cloud Basics)",
           link: "https://www.dicoding.com/certificates/ERZR0817QXYV",
+        },
+      ],
+    },
+    {
+      type: "Course",
+      name: "Progate",
+      link: "https://progate.com/",
+      certificate: [
+        {
+          name: "React",
+          link: "https://drive.google.com/file/d/1b80zFNL9-Cc5jSKa2Hpkc_6l_NwsvOoP/view?usp=sharing",
+        },
+        {
+          name: "NodeJS",
+          link: "https://drive.google.com/file/d/1GydrUfjuYXyKf4PPa9xOfDS9Ag4RN03C/view?usp=sharing",
+        },
+        {
+          name: "Javascript",
+          link: "https://drive.google.com/file/d/1eVteeFTAeOZdjySVwk32LbsbipnBvCrd/view?usp=sharing",
+        },
+        {
+          name: "HTML & CSS",
+          link: "https://drive.google.com/file/d/1fZB2CwZ1c7UL_clMIuSp3W98NAavhBnJ/view?usp=sharing",
+        },
+      ],
+    },
+    {
+      type: "Competence",
+      name: "BNSP",
+      link: "https://www.bnsp.go.id",
+      certificate: [
+        {
+          name: "Junior Web Developer",
+          link: "https://www.linkedin.com/feed/update/urn:li:activity:7005734510378041344/",
         },
       ],
     },
@@ -63,17 +104,6 @@ export const ContentCertification = () => {
         },
       ],
     },
-    {
-      type: "Competence",
-      name: "BNSP",
-      link: "https://www.bnsp.go.id",
-      certificate: [
-        {
-          name: "Junior Web Developer",
-          link: "https://www.linkedin.com/feed/update/urn:li:activity:7005734510378041344/",
-        },
-      ],
-    },
   ];
 
   return (
@@ -83,7 +113,7 @@ export const ContentCertification = () => {
           <div key={index}>
             <h3 className="pb-3 text-lg font-medium leading-loose text-secondary md:text-xl">
               {vendor.type}
-              <span className=" text-accent">
+              <span className="text-base text-accent">
                 {" "}
                 @
                 <a
@@ -99,23 +129,7 @@ export const ContentCertification = () => {
             <ul className="flex list-inside list-disc flex-col gap-4 pb-5 text-sm leading-relaxed lg:text-base">
               {vendor.certificate.map((item, index) => {
                 return (
-                  <li
-                    key={index}
-                    onMouseEnter={() => {
-                      setHover((prehover) => {
-                        const newHover = [...prehover];
-                        newHover[index] = true;
-                        return newHover;
-                      });
-                    }}
-                    onMouseLeave={() => {
-                      setHover((prehover) => {
-                        const newHover = [...prehover];
-                        newHover[index] = false;
-                        return newHover;
-                      });
-                    }}
-                  >
+                  <li key={index}>
                     <a
                       href={item.link}
                       target="_blank"
@@ -123,12 +137,6 @@ export const ContentCertification = () => {
                       className="static  items-center justify-start transition-all duration-300 hover:text-accent md:inline-flex"
                     >
                       {item.name}
-                      <BsArrowUpRightCircle
-                        className={`ml-1 hidden transition-all duration-300 md:inline-flex ${
-                          hover[index] && "rotate-45"
-                        }`}
-                        size={16}
-                      />
                     </a>
                   </li>
                 );
