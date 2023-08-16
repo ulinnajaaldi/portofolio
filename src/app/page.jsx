@@ -34,10 +34,10 @@ export default function Home() {
           className="w-full text-sm leading-relaxed text-primary md:w-[540px] md:text-base"
           data-aos="zoom-in-up"
         >
-          I{`'`}m a Front-End software engineer specializes in building (and
-          sometimes designing) amazing and new digital experiences. Currently, I
-          am focusing on creating interactive 3d website applications for
-          industrial needs.
+          I'm a Front-End Software Engineer with a year of web development
+          experience, specializing in the JavaScript. I'm passionate about
+          staying current with the latest industry advancements and consistently
+          enhancing my skills.
         </p>
         <div
           className="mt-10 text-sm md:mt-14"
