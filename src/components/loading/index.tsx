@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import "./loading-spinner.css";
 
 const Loading: FC = () => {
   return (
