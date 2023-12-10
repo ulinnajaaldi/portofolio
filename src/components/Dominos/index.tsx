@@ -2,7 +2,7 @@
 
 import { type FC, useState } from "react";
 import Spline from "@splinetool/react-spline";
-import { Loading } from "@/components";
+import { LoadingSpinner } from "@/components";
 
 const Dominos: FC = () => {
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ const Dominos: FC = () => {
             justifyContent: "center",
           }}
         >
-          <Loading />
+          <LoadingSpinner />
         </div>
       )}
     </>

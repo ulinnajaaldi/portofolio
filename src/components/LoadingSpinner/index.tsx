@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-const Loading: FC = () => {
+const LoadingSpinner: FC = () => {
   return (
     <div className="lds-roller">
       <div></div>
@@ -15,4 +15,4 @@ const Loading: FC = () => {
   );
 };
 
-export default Loading;
+export default LoadingSpinner;
