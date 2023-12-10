@@ -1,6 +1,6 @@
 import "./loading-spinner.css";
 
-export default function LoadingSpinner() {
+export default function Loading() {
   return (
     <div className="lds-roller">
       <div></div>

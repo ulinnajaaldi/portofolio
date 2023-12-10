@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
-import LoadingSpinner from "../Loading";
+import { Loading } from "@/components";
 
 export default function CardProject(props) {
   const [hover, setHover] = useState(false);
@@ -88,7 +88,7 @@ export default function CardProject(props) {
             </p>
             {loading && (
               <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-md bg-base_col_darker/60">
-                <LoadingSpinner />
+                <Loading />
               </div>
             )}
           </div>
