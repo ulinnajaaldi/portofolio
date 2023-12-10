@@ -1,0 +1,17 @@
+export const ImageThreede = "/images/3d.webp";
+export const ImageAbinawa = "/images/abinawa.webp";
+export const ImageBertumbuh = "/images/bertumbuh.webp";
+export const ImageBookshelf = "/images/bookshelf.webp";
+export const ImageCeritain = "/images/ceritain.webp";
+export const ImageCoffeBean = "/images/coffe-bean.webp";
+export const ImageDapbunda = "/images/dapbunda.webp";
+export const ImageHpcJapan = "/images/hpc-japan.webp";
+export const ImageInpoUms = "/images/inpo-ums.webp";
+export const ImageMulih = "/images/mulih.webp";
+export const ImageNotes = "/images/notes.webp";
+export const ImagePinarakResto = "/images/pinarak-resto.webp";
+export const ImagePortofolioV1 = "/images/portofolio-v1.webp";
+export const ImageRose = "/images/rose.webp";
+export const ImageSecret = "/images/secret.webp";
+export const ImageTravel = "/images/travel.webp";
+export const ImageUlin = "/images/ulin.webp";

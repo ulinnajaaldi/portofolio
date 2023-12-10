@@ -14,12 +14,14 @@
     "aos": "^2.3.4",
     "eslint": "8.32.0",
     "eslint-config-next": "^13.4.2",
-    "next": "^13.4.2",
+    "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
+    "@types/node": "20.10.3",
+    "@types/react": "18.2.42",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
