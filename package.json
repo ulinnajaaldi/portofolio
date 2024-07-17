@@ -1,7 +1,11 @@
 {
-  "name": "new-universe",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "0.1.1",
   "private": true,
+  "author": {
+    "name": "Aldilla Ulinnaja",
+    "email": "ulinnajaaldi.tech@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,24 +13,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@splinetool/react-spline": "^2.2.5",
-    "@splinetool/runtime": "^0.9.208",
+    "@radix-ui/react-tooltip": "^1.1.2",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.526",
     "aos": "^2.3.4",
-    "eslint": "8.32.0",
-    "eslint-config-next": "^13.4.2",
-    "next": "^14.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "clsx": "^2.1.1",
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.7.1",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.4",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "20.10.3",
     "@types/react": "18.2.42",
     "autoprefixer": "^10.4.13",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.4",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.3",
-    "prettier-plugin-tailwindcss": "^0.2.2",
-    "tailwindcss": "^3.2.4"
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^5"
   }
 }
