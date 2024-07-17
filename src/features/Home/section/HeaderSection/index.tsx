@@ -22,13 +22,13 @@ const HeaderSection: FC = () => {
         I build things for the web.
       </h1>
       <p
-        className="w-full text-sm leading-relaxed text-primary md:w-[540px] md:text-base"
+        className="w-full text-sm leading-relaxed text-primary md:w-[580px] md:text-base"
         data-aos="zoom-in-up"
       >
-        I'm a Front-End Software Engineer with a year of web development
-        experience, specializing in the JavaScript. I'm passionate about staying
-        current with the latest industry advancements and consistently enhancing
-        my skills.
+        I'm a Software Developer with <b>over two years</b> of web development
+        experience, specializing in <b>TypeScript</b>. I'm passionate about
+        staying current with the latest industry advancements and consistently
+        enhancing my skills.
       </p>
       <div
         className="mt-10 text-sm md:mt-14"

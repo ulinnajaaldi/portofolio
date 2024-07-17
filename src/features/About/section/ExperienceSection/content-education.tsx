@@ -17,7 +17,7 @@ export const ContentEducation = () => {
         </span>
       </h3>
       <p className="pb-5 font-mono text-sm lg:text-base">Aug 2020 - Present</p>
-      <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
+      <ul className="flex list-inside list-disc flex-col gap-4 text-justify text-sm leading-relaxed lg:text-base">
         <li>
           I enrolled in the Informatics Engineering program with the motivation
           that commercial jobs would be replaced by technology in the future, so

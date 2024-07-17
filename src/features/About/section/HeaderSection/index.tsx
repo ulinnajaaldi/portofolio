@@ -25,16 +25,19 @@ const HeaderSection: FC = () => {
         </div>
         <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
           <p data-aos="zoom-in-right">
-            Hello! My real name is Aldilla Ulinnaja, an Informatics Engineering
-            student interested and experienced in Web Development, specializing
-            in <span className="text-accent">Frontend Development</span> using
-            JavaScript
+            Hello! My name is Aldilla Ulinnaja, an Informatics Engineering
+            student with experience and interest in Web Development. I
+            specialize in{" "}
+            <span className="text-accent">Frontend Development</span> and have
+            some experience in{" "}
+            <span className="text-accent">Backend Development</span> using
+            JavaScript or TypeScript.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="100">
             As an Informatics Engineering student, I have strong knowledge and
-            expertise in Web programming and UI Design. I possess the ability to
-            create user-friendly and visually captivating websites and
-            applications.
+            expertise in the <b>ReactJS Ecosystem</b>. I possess the ability to
+            create websites and applications that are both user-friendly and
+            visually captivating.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="200">
             I am constantly striving to improve my skills and knowledge. I

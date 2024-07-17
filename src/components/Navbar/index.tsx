@@ -1,9 +1,10 @@
 "use client";
 
-import { NAVBAR_ITEMS } from "@/constants/components";
-import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { BiMenuAltRight, BiX } from "react-icons/bi";
+
+import { NAVBAR_ITEMS } from "@/constants/components";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

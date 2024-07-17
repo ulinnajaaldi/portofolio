@@ -12,6 +12,6 @@ export const ImageNotes = "/images/notes.webp";
 export const ImagePinarakResto = "/images/pinarak-resto.webp";
 export const ImagePortofolioV1 = "/images/portofolio-v1.webp";
 export const ImageRose = "/images/rose.webp";
-export const ImageSecret = "/images/secret.webp";
+export const ImageSecretPlay = "/images/secret-play.png";
 export const ImageTravel = "/images/travel.webp";
 export const ImageUlin = "/images/ulin.webp";

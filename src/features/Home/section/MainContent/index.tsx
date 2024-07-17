@@ -2,20 +2,22 @@
 
 import type { FC } from "react";
 import Image from "next/image";
-import { ImageSecret } from "@/constants/images";
+import { ImageSecretPlay } from "@/constants/images";
 import { Dominos } from "@/components";
 
 const MainContent: FC = () => {
   return (
     <section className="flex h-[650px] w-full flex-col items-center justify-center py-24 text-center ">
       <div className="absolute mb-[-430px] mr-[10px] md:mb-[400px] md:mr-[200px] lg:mr-[300px] xl:mr-[480px]">
-        <Image
-          src={ImageSecret}
-          alt="secret game"
-          width={300}
-          height={300}
-          className="h-[150px] w-auto opacity-20 md:h-[200px] lg:h-[250px]"
-        />
+        <div className="relative h-[150px] w-auto opacity-20 md:h-[200px] lg:h-[250px]">
+          <Image
+            src={ImageSecretPlay}
+            alt="secret game"
+            width={1024}
+            height={1024}
+            className="w-full h-full object-contain"
+          />
+        </div>
       </div>
       <div className="z-40 mb-0 md:mb-10">
         <h2
