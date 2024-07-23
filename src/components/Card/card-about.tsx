@@ -27,6 +27,8 @@ const CardAbout: FC<CardAboutProps> = (props) => {
         <Image
           src={images}
           alt={title}
+          width={256}
+          height={256}
           className={`drop-shadow-xl transition-all duration-300 ${
             hover
               ? "h-[75%] w-[75%] md:h-[85%] md:w-[85%] lg:h-full lg:w-full"

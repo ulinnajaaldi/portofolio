@@ -1,6 +1,9 @@
 "use client";
 
 import React, { FC, useState } from "react";
+import { motion } from "framer-motion";
+
+import { useVisibility } from "@/utils/visibility";
 import { ContentCertification } from "./content-certification";
 import { ContentEducation } from "./content-education";
 import { ContentAward } from "./content-awards";
@@ -10,6 +13,9 @@ import ContentSpeaker from "./content-speaker";
 
 const ExperienceSection: FC = () => {
   const [activeCategory, setActiveCategory] = useState("education");
+  const { ref: refH1, isVisible: isVisibleH1 } = useVisibility();
+  const { ref: refLine, isVisible: isVisibleLine } = useVisibility();
+  const { ref: refContent, isVisible: isVisibleContent } = useVisibility();
 
   let selectedContent;
 
@@ -40,26 +46,29 @@ const ExperienceSection: FC = () => {
     <section className="pb-[50px] pt-[100px] lg:pb-[60px]">
       <div className="flex flex-col items-center justify-center gap-5 pb-32">
         <div className="mb-5 flex w-full items-center justify-start gap-4 lg:w-[776px]">
-          <h1
+          <motion.h1
+            ref={refH1}
+            initial={{ x: 60, opacity: 0 }}
+            animate={isVisibleH1 ? { x: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="text-xl font-semibold text-secondary md:text-2xl"
-            data-aos="fade-left"
-            data-aos-duration="300"
-            data-aos-once="true"
           >
             My Experience
-          </h1>
-          <div
+          </motion.h1>
+          <motion.div
+            ref={refLine}
+            initial={{ scale: 0.7, x: 60, opacity: 0 }}
+            animate={isVisibleLine ? { scale: 1, x: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="h-[1px] w-32 bg-primary md:w-96"
-            data-aos="zoom-in-left"
-            data-aos-duration="600"
-            data-aos-once="true"
-          ></div>
+          ></motion.div>
         </div>
-        <div
+        <motion.div
+          ref={refContent}
+          initial={{ y: 60, opacity: 0 }}
+          animate={isVisibleContent ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="flex flex-col items-center gap-5 md:flex-row md:items-start md:gap-8"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-once="true"
         >
           <div className="flex w-[370px] flex-row overflow-x-scroll font-mono text-sm text-primary md:w-auto md:flex-col  md:overflow-auto">
             {categories.map((category) => (
@@ -79,7 +88,7 @@ const ExperienceSection: FC = () => {
           <div className="h-[480px] w-[350px] overflow-auto pr-2 md:w-[490.78px] lg:w-[680px]">
             {selectedContent}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

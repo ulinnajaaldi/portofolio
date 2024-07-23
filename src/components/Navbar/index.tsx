@@ -2,9 +2,11 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { BiMenuAltRight, BiX } from "react-icons/bi";
 
 import { NAVBAR_ITEMS } from "@/constants/components";
+import { motionFadeDown, motionFadeUp } from "@/utils/motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,13 +60,9 @@ export default function Navbar() {
     >
       <div className="flex h-24 items-center justify-between px-7 lg:px-14">
         <Link href="/" className="text-accent" scroll={false}>
-          <h1
-            className="text-2xl font-semibold"
-            data-aos="fade-down"
-            data-aos-once="true"
-          >
+          <motion.h1 {...motionFadeUp} className="text-2xl font-semibold">
             Ulinnaja.
-          </h1>
+          </motion.h1>
         </Link>
 
         {/* Hamburger Button */}
@@ -87,18 +85,23 @@ export default function Navbar() {
         {/* Navbar Text */}
         <div className="text-base-content hidden  gap-10 lg:flex">
           {NAVBAR_ITEMS.map((item, index) => (
-            <Link
-              href={item.href}
-              className="flex flex-col items-end font-mono text-sm  text-primary transition-all duration-300 hover:text-accent xl:text-base"
-              key={index}
-              data-aos="fade-down"
-              data-aos-delay={`${index}00`}
-              data-aos-once="true"
-              scroll={false}
+            <motion.div
+              key={`${item.title}-${index}`}
+              {...motionFadeDown}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+                delay: index * 0.1,
+              }}
             >
-              <span className="text-xs text-accent">{item.number}</span>
-              <p>{`// ${item.title}`}</p>
-            </Link>
+              <Link
+                href={item.href}
+                className="flex flex-col items-end font-mono text-sm  text-primary transition-all duration-300 hover:text-accent xl:text-base"
+              >
+                <span className="text-xs text-accent">{item.number}</span>
+                <p>{`// ${item.title}`}</p>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

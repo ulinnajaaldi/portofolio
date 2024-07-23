@@ -1,21 +1,15 @@
 "use client";
 
-import React, { useEffect } from "react";
-// @ts-ignore
-import * as AOS from "aos";
+import React from "react";
 
 import { Contact, Navbar, Footer } from "@/components";
 
-const BaseLayout = ({ children }) => {
-  useEffect(() => {
-    AOS.init({});
-  }, []);
-
+const BaseLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
       <Contact />
-      <main className="container">{children}</main>
+      <main className="container min-h-[100vh]">{children}</main>
       <Footer />
     </>
   );

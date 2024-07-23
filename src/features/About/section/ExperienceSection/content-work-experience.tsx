@@ -41,10 +41,7 @@ export const ContentWorkExperience: FC = () => {
                 <TooltipProvider key={index} delayDuration={200}>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div
-                        className="rounded-md bg-accent/10 p-1"
-                        title={tech.name}
-                      >
+                      <div className="rounded-md bg-accent/10 p-1">
                         <Image
                           src={tech.icon}
                           alt={tech.icon}
