@@ -37,7 +37,7 @@ import webpackIcon from "@icons/webpack.svg";
 import typescriptIcon from "@icons/typescript.svg";
 import reactQueryIcon from "@icons/react-query.svg";
 import formikIcon from "@icons/formik.png";
-import postgreeIcon from "@icons/postgreSQL.svg";
+import postgreeIcon from "@icons/postgresql.svg";
 import pnpmIcon from "@icons/pnpm.svg";
 import vueIcon from "@icons/vue.svg";
 
