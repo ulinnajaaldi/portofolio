@@ -15,11 +15,11 @@ export default function Contact() {
       icon: <FiGithub size={20} />,
       link: "https://github.com/ulinnajaaldi",
     },
-    {
-      name: "Instagram",
-      icon: <FiInstagram size={20} />,
-      link: "https://www.instagram.com/ulinnaja.aldi/",
-    },
+    // {
+    //   name: "Instagram",
+    //   icon: <FiInstagram size={20} />,
+    //   link: "https://www.instagram.com/ulinnaja.aldi/",
+    // },
     {
       name: "Telegram",
       icon: <TbBrandTelegram size={20} />,
