@@ -25,28 +25,31 @@ const HeaderSection: FC = () => {
         </div>
         <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
           <p data-aos="zoom-in-right">
-            Hello! My real name is Aldilla Ulinnaja, an Informatics Engineering
-            student interested and experienced in Web Development, specializing
-            in <span className="text-accent">Frontend Development</span> using
-            JavaScript
+            I'm Aldilla Ulinnaja, a web developer specializing in the{" "}
+            <span className="text-accent">TypeScript + React ecosystem</span>,
+            with solid experience building modern, scalable applications using
+            React, Next.js, and Node.js. With over 3 years of hands-on
+            experience in the industry, I thrive at the intersection of
+            intuitive UI and clean, maintainable code.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="100">
-            As an Informatics Engineering student, I have strong knowledge and
-            expertise in Web programming and UI Design. I possess the ability to
-            create user-friendly and visually captivating websites and
-            applications.
+            My core strength lies in frontend development—designing responsive,
+            high-performing interfaces using React, Next.js, Tailwind, Zustand,
+            and other modern tools. I also work comfortably on the backend using
+            Node.js, NextJs, and Bun, enabling me to develop fullstack
+            applications end-to-end.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="200">
-            I am constantly striving to improve my skills and knowledge. I
-            believe that ongoing training and personal projects are key to
-            success. I am committed to staying up-to-date with the latest
-            developments in my field and continuously expanding my knowledge and
-            skills.
+            From internal tools to production-ready platforms, I've contributed
+            to real-world projects that deliver strong user experiences and
+            performance. I'm deeply committed to continuous learning, actively
+            mentoring others, and contributing to developer communities.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="300">
-            And oh, there's a little twist &#x2013; I'm also into the world of
-            3D modeling, though I confess I might not be diving into its depths
-            just yet. It's like my side quest that adds a dash of excitement.
+            I'm also passionate about building{" "}
+            <span className="text-accent">creative web experiences</span>,
+            occasionally blending in 3D elements to push interactivity and
+            engagement beyond the usual.
           </p>
         </div>
       </div>

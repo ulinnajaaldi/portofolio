@@ -19,28 +19,16 @@ export const ContentEducation = () => {
       <p className="pb-5 font-mono text-sm lg:text-base">Aug 2020 - Present</p>
       <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
         <li>
-          I enrolled in the Informatics Engineering program with the motivation
-          that commercial jobs would be replaced by technology in the future, so
-          I decided to pursue this field of study.
+          Activities and Associations: Himpunan Mahasiswa Teknik Informatika and
+          Event Committee.
         </li>
         <li>
-          During the first four semesters, I was more interested in graphic
-          design and 3D modeling, and I even created a{" "}
-          <a
-            href="https://www.youtube.com/c/UlinnajaTbx"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            YouTube channel
-          </a>{" "}
-          with content on Unity game modding, which now has over 20k++
-          subscribers.
+          Becoming the #1 Hokage of GDSC UMS, core member of the web development
+          team, active contribution in the first-year development of GDSC UMS.
         </li>
         <li>
-          Starting from the fifth semester, I realized that coding was my main
-          goal in pursuing this major. Therefore, I began to learn about
-          programming and fell in love with coding ✨
+          Graduated with a final thesis building INNOVATION OF ACADEMIC
+          INFORMATION SYSTEM - A REACT NATIVE-BASED APPLICATION
         </li>
       </ul>
     </div>
