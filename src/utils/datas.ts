@@ -1,33 +1,3 @@
-// Stack Icons
-import htmlIcon from "@icons/html.svg";
-import cssIcon from "@icons/css.svg";
-import jsIcon from "@icons/js.svg";
-import phpIcon from "@icons/php.svg";
-import sassIcon from "@icons/sass.svg";
-import bootstrapIcon from "@icons/bootstrap.svg";
-import tailwindIcon from "@icons/tailwind.svg";
-import reactIcon from "@icons/react.svg";
-import nextjsIcon from "@icons/nextjs.svg";
-import threejsIcon from "@icons/threejs.svg";
-import laravelIcon from "@icons/laravel.svg";
-import nodejsIcon from "@icons/nodejs.svg";
-import npmIcon from "@icons/npm.svg";
-import yarnIcon from "@icons/yarn.svg";
-import blenderIcon from "@icons/blender.svg";
-import figmaIcon from "@icons/figma.svg";
-import gitIcon from "@icons/git.svg";
-import githubIcon from "@icons/github.svg";
-import mysqlIcon from "@icons/mysql.svg";
-import splineIcon from "@icons/spline.svg";
-import vscodeIcon from "@icons/vscode.svg";
-import vite from "@icons/vite.svg";
-import webpackIcon from "@icons/webpack.svg";
-import expressIcon from "@icons/express.svg";
-import mongodbIcon from "@icons/mongodb.svg";
-import typescriptIcon from "@icons/typescript.svg";
-import reactQueryIcon from "@icons/react-query.svg";
-import formikIcon from "@icons/formik.png";
-
 // Project Images
 import mulih from "@images/mulih.webp";
 import travel from "@images/travel.webp";
@@ -54,46 +24,105 @@ import bookshelfGif from "@gif/bookshelf.gif";
 import sakurajapanGif from "@gif/sakura-japan.gif";
 import ceritainGif from "@gif/ceritain.gif";
 import pinarakrestoGif from "@gif/pinarak-resto.gif";
+import ICONS from "@/constants/icons";
+import { StaticImageData } from "next/image";
 
 const tools = {
-  Git: { name: "Git", src: gitIcon, level: "Version control" },
-  Github: { name: "Github", src: githubIcon, level: "Git hosting" },
-  NPM: { name: "NPM", src: npmIcon, level: "Package manager" },
-  Yarn: { name: "Yarn", src: yarnIcon, level: "Package manager" },
-  Vite: { name: "Vite", src: vite, level: "Build tool" },
-  VSCode: { name: "VSCode", src: vscodeIcon, level: "Code editor" },
-  Figma: { name: "Figma", src: figmaIcon, level: "UIUX Design tool" },
-  Blender: { name: "Blender", src: blenderIcon, level: "3D software" },
-  Spline: { name: "Spline", src: splineIcon, level: "Web 3D design" },
+  Git: { name: "Git", src: ICONS.git, level: "Version control" },
+  Github: { name: "Github", src: ICONS.github, level: "Git hosting" },
+  NPM: { name: "PNPM", src: ICONS.npm, level: "Depedencies manager" },
+  VSCode: { name: "VSCode", src: ICONS.vscodeCodeEditor, level: "Code editor" },
+  Figma: { name: "Figma", src: ICONS.figma, level: "UIUX Design tool" },
+  Blender: { name: "Blender", src: ICONS.blender, level: "3D software" },
+  Spline: { name: "Spline", src: ICONS.spline, level: "Web 3D design" },
+  Firebase: {
+    name: "Firebase",
+    src: ICONS.firebase,
+    level: "Database,Auth,Realtime",
+  },
+  MongoDB: {
+    name: "MongoDB",
+    src: ICONS.mongodb,
+    level: "NoSQL database",
+  },
+  MySQL: {
+    name: "MySQL",
+    src: ICONS.mysqlDb,
+    level: "Relational database",
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    src: ICONS.postgreSQL,
+    level: "Relational database",
+  },
 };
 
-const stacks = {
-  HTML: { name: "HTML", src: htmlIcon, level: "Advanced" },
-  CSS: { name: "CSS", src: cssIcon, level: "Advanced" },
-  SASS: { name: "SASS", src: sassIcon, level: "Advanced" },
-  PHP: { name: "PHP", src: phpIcon, level: "Intermediate" },
-  JS: { name: "Javascript", src: jsIcon, level: "Advanced" },
-  Typescript: { name: "Typescript", src: typescriptIcon, level: "Beginer" },
-  Webpack: { name: "Webpack", src: webpackIcon, level: "Advanced" },
-  React: { name: "ReactJS", src: reactIcon, level: "Advanced" },
-  NextJS: { name: "NextJS", src: nextjsIcon, level: "Advanced" },
-  ReactQuery: {
-    name: "React Query",
-    src: reactQueryIcon,
+interface IStack {
+  name: string;
+  src: string | StaticImageData;
+  level: "Beginer" | "Intermediate" | "Advanced" | "Expert";
+}
+
+const stacks: Record<string, IStack> = {
+  HTML: { name: "HTML", src: ICONS.html5, level: "Expert" },
+  CSS: { name: "CSS", src: ICONS.css3, level: "Expert" },
+  SASS: { name: "SASS", src: ICONS.sass, level: "Advanced" },
+  JS: { name: "Javascript", src: ICONS.js, level: "Expert" },
+  Typescript: {
+    name: "Typescript",
+    src: ICONS.typescriptTsLogo,
+    level: "Expert",
+  },
+  // Styling / UI Frameworks
+  Tailwind: { name: "TailwindCSS", src: ICONS.tailwind, level: "Expert" },
+  Bootstrap: { name: "Bootstrap", src: ICONS.bootstrap, level: "Expert" },
+  MaterialUI: {
+    name: "MaterialUI",
+    src: ICONS.materialUI,
     level: "Intermediate",
   },
-  Formik: { name: "Formik", src: formikIcon, level: "Intermediate" },
+  Shadcn: { name: "Shadcn", src: ICONS.shadcn, level: "Expert" },
+
+  // 3. JavaScript Frameworks & Libraries
+  React: { name: "React", src: ICONS.react, level: "Expert" },
+  ReactNative: { name: "React Native", src: ICONS.react, level: "Advanced" },
+  NextJS: { name: "Next", src: ICONS.nextjs, level: "Expert" },
+  Vue: { name: "Vue", src: ICONS.vue, level: "Intermediate" },
   ThreeJS: {
     name: "ThreeJS",
-    src: threejsIcon,
-    level: "Use Spline Tools",
+    src: ICONS.threejs,
+    level: "Intermediate",
   },
-  Laravel: { name: "Laravel", src: laravelIcon, level: "Beginer" },
-  Express: { name: "ExpressJS", src: expressIcon, level: "Beginner" },
-  Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Intermediate" },
-  Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Advanced" },
-  MySQL: { name: "MySQL", src: mysqlIcon, level: "Intermediate" },
-  MongoDB: { name: "MongoDB", src: mongodbIcon, level: "Beginer" },
+  Vite: { name: "Vite", src: ICONS.vite, level: "Advanced" },
+  Webpack: { name: "Webpack", src: ICONS.webpackBundler, level: "Advanced" },
+  Storybook: { name: "Storybook", src: ICONS.storybook, level: "Advanced" },
+  ReactQuery: {
+    name: "React Query",
+    src: ICONS.reactQueryLogo,
+    level: "Expert",
+  },
+
+  // 4. Backend / Fullstack Technologies
+  Express: { name: "Express", src: ICONS.express, level: "Advanced" },
+  HonoJs: { name: "Hono", src: ICONS.honoJs, level: "Expert" },
+  WebSocket: {
+    name: "WebSocket",
+    src: ICONS.websocket,
+    level: "Intermediate",
+  },
+  Laravel: { name: "Laravel", src: ICONS.laravel, level: "Intermediate" },
+
+  // 5. Databases & ORMs
+  PrismaORM: {
+    name: "Prisma ORM",
+    src: ICONS.prismaOrm,
+    level: "Intermediate",
+  },
+  DrizzleOrm: {
+    name: "Drizzle ORM",
+    src: ICONS.drizzleOrm,
+    level: "Advanced",
+  },
 };
 
 const projects = [

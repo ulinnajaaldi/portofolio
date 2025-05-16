@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface NavbarItemsProps {
   title: string;
   href: string;
@@ -5,7 +7,7 @@ export interface NavbarItemsProps {
 }
 
 export interface CardAboutProps {
-  images: string;
+  images: string | StaticImageData;
   title: string;
   informationLevel: string;
 }
